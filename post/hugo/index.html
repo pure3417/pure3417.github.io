@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hugo安装与部署 - Pure3417的个人博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pure3417" /><meta name="description" content="Hugo简介 Hugo官网https://gohugo.io/ Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/hugo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Hugo安装与部署" />
+<meta property="og:description" content="Hugo简介 Hugo官网https://gohugo.io/ Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/hugo/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-24T20:42:09+08:00" />
+<meta property="article:modified_time" content="2023-01-24T20:42:09+08:00" />
+<meta itemprop="name" content="Hugo安装与部署">
+<meta itemprop="description" content="Hugo简介 Hugo官网https://gohugo.io/ Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，"><meta itemprop="datePublished" content="2023-01-24T20:42:09+08:00" />
+<meta itemprop="dateModified" content="2023-01-24T20:42:09+08:00" />
+<meta itemprop="wordCount" content="1372">
+<meta itemprop="keywords" content="Hugo,博客搭建," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo安装与部署"/>
+<meta name="twitter:description" content="Hugo简介 Hugo官网https://gohugo.io/ Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pure3417的个人博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pure3417的个人博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hugo安装与部署</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-01-24 </span>
+        <div class="post-category">
+            <a href="/categories/hugo/"> Hugo </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo简介">Hugo简介</a></li>
+    <li><a href="#hugo安装">Hugo安装</a>
+      <ul>
+        <li><a href="#win">Win</a>
+          <ul>
+            <li><a href="#下载解压">下载解压</a></li>
+            <li><a href="#配置环境变量">配置环境变量</a></li>
+            <li><a href="#验证">验证</a></li>
+          </ul>
+        </li>
+        <li><a href="#其他系统">其他系统</a></li>
+      </ul>
+    </li>
+    <li><a href="#创建博客站点">创建博客（站点）</a>
+      <ul>
+        <li><a href="#新建站点">新建站点</a></li>
+        <li><a href="#目录结构">目录结构</a></li>
+        <li><a href="#安装主题">安装主题</a></li>
+        <li><a href="#生成博文">生成博文</a></li>
+        <li><a href="#渲染">渲染</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="hugo简介">Hugo简介</h1>
+<p><a href="https://gohugo.io/">Hugo官网</a><a href="https://gohugo.io/">https://gohugo.io/</a></p>
+<p><img src="01hugo_intro.png" alt="Hugo"></p>
+<p>Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，把他们渲染到完全的 HTML 网站。</p>
+<p>Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。</p>
+<p>Hugo 只需要几分之一秒就可以渲染一个经典的中型网站，最好网站的每个部分渲染只需 1 毫秒。</p>
+<p>Hugo 非常适合博客，文档等等网站的生成。</p>
+<p>Hugo 当前提供 Windows，Linux，FreeBSD，NetBSD 和 OS X (Darwin) 的 x64, i386 和 ARM 架构的二进制预构建包。</p>
+<p>Hugo 的源代码可以通过 Go 编译器工具链编译到任意地方运行，例如： DragonFly BSD, OpenBSD, Plan 9 和 Solaris。</p>
+<h1 id="hugo安装">Hugo安装</h1>
+<p>Hugo的安装方式有很多，<a href="https://gohugo.io/installation/"> Installation | Hugo</a>，可以根据个人的实际情况进行安装。</p>
+<h2 id="win">Win</h2>
+<h3 id="下载解压">下载解压</h3>
+<p>在<a href="https://github.com/gohugoio/hugo/releases">Releases · gohugoio/hugo</a>中下载想要的版本zip，解压得到一个hego.exe的可执行文件，理论上可以放到任何位置，最好不要放在带有中文的路径。</p>
+<p><img src="image-20230124225941277.png" alt="Hugo下载"></p>
+<h3 id="配置环境变量">配置环境变量</h3>
+<p>将Hugo添加到windows的环境变量<code>PATH</code>中。</p>
+<p>右击计算机&mdash;&gt;属性&mdash;&gt;高级系统设置&mdash;&gt;环境变量&mdash;&gt;系统变量&mdash;&gt;Path&mdash;&gt;编辑&mdash;&gt;新建&mdash;&gt;添加Hugo.exe存放的路径&mdash;&gt;确认</p>
+<p><img src="image-20230124231016874.png" alt="Hugo_path"></p>
+<h3 id="验证">验证</h3>
+<p>在cmd或者git bash中执行<code>hugo version</code></p>
+<p><img src="image-20230124231442925.png" alt="Hugo_vali"></p>
+<h2 id="其他系统">其他系统</h2>
+<p>待补充</p>
+<h1 id="创建博客站点">创建博客（站点）</h1>
+<h2 id="新建站点">新建站点</h2>
+<p>在自己的目录下，例如我这里是<code>G:\Desktop\hugo</code>，打开cmd或者git bash</p>
+<p>输入<code>hugo new site '你的文件名字'</code>，便可生成一个用于存放博客的文件夹</p>
+<p><img src="image-20230125000848433.png" alt="Hugo_site"></p>
+<h2 id="目录结构">目录结构</h2>
+<p>目录结构 <a href="https://gohugo.io/getting-started/directory-structure/"> Directory Structure | Hugo</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">myblog
+</span></span><span class="line"><span class="cl">├── archetypes                      内容模版目录
+</span></span><span class="line"><span class="cl">│   └── default.md                  模版文件
+</span></span><span class="line"><span class="cl">├── config.toml                     配置文件
+</span></span><span class="line"><span class="cl">├── content                         内容目录
+</span></span><span class="line"><span class="cl">├── data                            数据目录
+</span></span><span class="line"><span class="cl">├── layouts                         网站模版目录
+</span></span><span class="line"><span class="cl">├── static                          静态文件目录
+</span></span><span class="line"><span class="cl">└── themes                          主题目录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="安装主题">安装主题</h2>
+<p>Hugo没有自带主题，所以建立完文件夹后要导入主题文件。可以用<code>git clone</code> 的方式，也可以到相应主题的github中下载zip文件然后解压到自己博客的<code>themes</code>文件夹中。</p>
+<p>官网主题库：<a href="https://themes.gohugo.io/">Hugo Themes</a></p>
+<p>Hugo配置文件放置在源文件下，并且支持三种格式：toml，yaml，yml。这个配置文件可以直接从主题文件中的exampleSite 里copy到博客文件夹下，然后进行修改。</p>
+<ul>
+<li>注意点1：有些主题没有提供相应的配置文件，得进行自己修改，不建议选用这类主题。</li>
+<li>注意点2：配置文件中要确保里面的主题名字和你themes文件夹中相应的主题文件夹名字一样，比如我的主题是pure，那么配置文件里的theme = pure，并且themes 文件夹中也有一个pure的文件夹。这是为了保证工具能依据名字找到相应的主题文件。</li>
+</ul>
+<h2 id="生成博文">生成博文</h2>
+<p>在cmd或者git bash中，进入你新生成的站点，执行<code>hugo new post/xxx.md </code>，这时会在<code>content/post</code>文件夹下生成你的markdown文件，打开编辑即可。</p>
+<p><img src="image-20230125003013467.png" alt="Hugo_dir"></p>
+<h2 id="渲染">渲染</h2>
+<p>在博客文件夹中打开Git Bash 或 cmd，输入 <code>hugo server</code>，然后在浏览器访问 http://localhost:1313/ 来查看效果。</p>
+<p><img src="image-20230125003357707.png" alt="Hugo_res"></p>
+<p>注意，markdown文件中的 <code>front matter</code> 部分有一个<code>draft</code> 参数，如果<code>draft</code>设置为<code>true</code> 则可正常渲染，如果设置为<code>false</code>则不予以渲染。相应的如果想查看全部效果则输入<code>hugo server -D</code> 表示将草稿文件也进行渲染。</p>
+<p><img src="image-20230125003313143.png" alt="Hugo_res1"></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Pure3417</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-01-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hugo/">Hugo</a>
+          <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+          </div>
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Pure3417</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
