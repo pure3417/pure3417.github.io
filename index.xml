@@ -6,7 +6,16 @@
     <description>Recent content on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Jan 2023 20:42:09 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 18:43:47 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git与SVN的差异比较</title>
+      <link>http://localhost:1313/post/git/gitvssvn/</link>
+      <pubDate>Wed, 25 Jan 2023 18:43:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/git/gitvssvn/</guid>
+      <description>SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi</description>
+    </item>
+    
     <item>
       <title>Hugo安装与部署</title>
       <link>http://localhost:1313/post/hugo/</link>
