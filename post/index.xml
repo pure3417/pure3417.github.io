@@ -6,31 +6,40 @@
     <description>Recent content in Posts on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Jan 2023 10:55:02 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 15:31:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git的工作原理</title>
+      <link>http://localhost:1313/post/git/04/</link>
+      <pubDate>Thu, 26 Jan 2023 15:31:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/git/04/</guid>
+      <description>工作区域 git本地有三个工作区域 工作目录(working Directory)、暂存区(Stage/Index)、资源库(Repository</description>
+    </item>
+    
     <item>
       <title>Git基本配置</title>
-      <link>http://localhost:1313/post/git/git_conf/</link>
+      <link>http://localhost:1313/post/git/03/</link>
       <pubDate>Thu, 26 Jan 2023 10:55:02 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/git_conf/</guid>
-      <description>前提已安装好Git，Git安装流程请查看Git的卸载与安装 配置用户和邮箱 1 2 3 4 5 6 7 git config --global user.name &amp;#34;your name&amp;#34; git config --global uesr.email &amp;#34;your email&amp;#34; Windows用户也可以查看C</description>
+      <guid>http://localhost:1313/post/git/03/</guid>
+      <description>&lt;p&gt;前提已安装好Git，Git安装流程请查看&lt;a href=&#34;http://pure3417.top/post/git/installgit/&#34;&gt;Git的卸载与安装&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git的卸载与安装</title>
-      <link>http://localhost:1313/post/git/installgit/</link>
+      <link>http://localhost:1313/post/git/02/</link>
       <pubDate>Wed, 25 Jan 2023 19:19:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/installgit/</guid>
+      <guid>http://localhost:1313/post/git/02/</guid>
       <description>卸载 win 清理环境变量 右键我的电脑&amp;mdash;&amp;gt;属性&amp;mdash;&amp;gt;高级系统设置&amp;mdash;&amp;gt;环境变量&amp;mdash;&amp;gt</description>
     </item>
     
     <item>
       <title>Git与SVN的差异比较</title>
-      <link>http://localhost:1313/post/git/gitvssvn/</link>
+      <link>http://localhost:1313/post/git/01/</link>
       <pubDate>Wed, 25 Jan 2023 18:43:47 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/gitvssvn/</guid>
+      <guid>http://localhost:1313/post/git/01/</guid>
       <description>SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi</description>
     </item>
     
