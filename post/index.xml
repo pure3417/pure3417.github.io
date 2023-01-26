@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Jan 2023 18:43:47 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 19:19:23 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git的卸载与安装</title>
+      <link>http://localhost:1313/post/git/installgit/</link>
+      <pubDate>Wed, 25 Jan 2023 19:19:23 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/git/installgit/</guid>
+      <description>卸载 win 清理环境变量 右键我的电脑&amp;mdash;&amp;gt;属性&amp;mdash;&amp;gt;高级系统设置&amp;mdash;&amp;gt;环境变量&amp;mdash;&amp;gt</description>
+    </item>
+    
     <item>
       <title>Git与SVN的差异比较</title>
       <link>http://localhost:1313/post/git/gitvssvn/</link>
