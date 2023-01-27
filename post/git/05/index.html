@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Git的基本操作 - Pure3417的个人博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pure3417" /><meta name="description" content="补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/git/05/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Git的基本操作" />
+<meta property="og:description" content="补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/git/05/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-26T15:45:41+08:00" />
+<meta property="article:modified_time" content="2023-01-26T15:45:41+08:00" />
+<meta itemprop="name" content="Git的基本操作">
+<meta itemprop="description" content="补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三"><meta itemprop="datePublished" content="2023-01-26T15:45:41+08:00" />
+<meta itemprop="dateModified" content="2023-01-26T15:45:41+08:00" />
+<meta itemprop="wordCount" content="1225">
+<meta itemprop="keywords" content="Git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git的基本操作"/>
+<meta name="twitter:description" content="补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pure3417的个人博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pure3417的个人博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Git的基本操作</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-01-26 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> Git </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#补充git的文件状态">补充：Git的文件状态</a></li>
+    <li><a href="#git基本使用">Git基本使用</a>
+      <ul>
+        <li><a href="#查看本地库状态">查看本地库状态</a></li>
+        <li><a href="#初始化本地库">初始化本地库</a></li>
+        <li><a href="#添加暂存区未跟踪---暂存">添加暂存区（未跟踪&mdash;&gt;暂存）</a></li>
+        <li><a href="#添加本地库暂存---未修改">添加本地库（暂存&mdash;&gt;未修改）</a></li>
+        <li><a href="#未修改---已修改">未修改&mdash;&gt;已修改</a></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a>
+      <ul>
+        <li><a href="#文件状态">文件状态</a></li>
+        <li><a href="#基本操作">基本操作</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="补充git的文件状态">补充：Git的文件状态</h1>
+<p>Git的文件有两种状态：<strong>未跟踪</strong>和<strong>已跟踪</strong>。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三种状态：<strong>未修改</strong>，<strong>已修改</strong>和<strong>暂存</strong></p>
+<p><strong>未修改：</strong> 表示磁盘中的文件和Git仓库中文件相同，没有修改。</p>
+<p><strong>已修改：</strong> 表示磁盘中的文件已被修改，和Git仓库中文件不同。</p>
+<p><strong>暂存：</strong> 表示文件修改已被保存，但尚未提交到Git仓库。</p>
+<p>可以通过<code>git status</code>来查看文件状态</p>
+<h1 id="git基本使用">Git基本使用</h1>
+<p>基于文件的几种状态演示几个常用命令</p>
+<h2 id="查看本地库状态">查看本地库状态</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>新建一个空白文件夹，在此文件夹下打开Git Bash，执行<code>git status</code>指令</p>
+<p><img src="01.png" alt="01"></p>
+<p>会提示我们这并不是一个Git仓库，这就需要我们初始化Git仓库了</p>
+<h2 id="初始化本地库">初始化本地库</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当我们执行完<code>git init</code>后</p>
+<p><img src="02.png" alt="02"></p>
+<p>会提醒我们，初始化了一个空的Git仓库，并在当前目录下生成一个名为<code>.git</code>的隐藏目录</p>
+<p>再次执行<code>git stustus</code>，会出现如下信息，这就表示我们的仓库已经完成了初始化</p>
+<p><img src="03.png" alt="03"></p>
+<p>进入<code>.git</code>隐藏目录，会有如下文件：</p>
+<p><img src="04.png" alt="04"></p>
+<p>因为这是一个新的Git仓库，里面没有实质性内容，研究意义不大，这里不做赘述，后面会单独讲解<code>.git</code>文件夹。</p>
+<p><font color=blue>注意：</font>现实开发中用到<code>git init</code>指令的机会不大，因为现实开发中公司的库一般都已经创建好了，我们直接<code>git clone</code>远程库即可，后面会说。</p>
+<h2 id="添加暂存区未跟踪---暂存">添加暂存区（未跟踪&mdash;&gt;暂存）</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add &lt;filename&gt;  -- 添加指定文件到暂存区
+</span></span><span class="line"><span class="cl">git add . -- 将所有文件添加到暂存区
+</span></span><span class="line"><span class="cl">git add * -- 同 git add .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在创建一个<code>1.txt</code>并添加一些内容，执行<code>git status</code>，会提示我们这是一个未跟踪的文件，使用<code>git add</code>将文件添加到暂存区。</p>
+<p><img src="05.png" alt="05"></p>
+<p>现在执行<code>git add</code>命令，并使用<code>git status</code>命令查看文件状态，发现文件提示颜色变成了绿色，这就表示我们的文件已经提交到了暂存区，变成了暂存状态</p>
+<p><img src="06.png" alt="06"></p>
+<h2 id="添加本地库暂存---未修改">添加本地库（暂存&mdash;&gt;未修改）</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;xxx&#34;</span> -- 将文件提交到本地仓库，-m：message，<span class="s2">&#34;xxx&#34;</span>为提交信息，要有意义
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用<code>git commit</code>命令将文件提交到本地库，再次使用<code>git status</code>命令查看文件状态，得到提示信息：没有任何文件需要提交，干净的工作树。这就表示我们的文件变为了未修改状态。</p>
+<p><img src="07.png" alt="07"></p>
+<h2 id="未修改---已修改">未修改&mdash;&gt;已修改</h2>
+<p>如何让文件从未修改状态变成已修改状态呢，直接修改文件即可，当文件修改后，再次查看文件状态，发现文件已经变成了已修改状态。</p>
+<p><img src="08.png" alt="08"></p>
+<p>修改后的文件再次通过<code>git add</code>提交到暂存区，<code>git commit</code>提交到本地库就可变为未修改状态。</p>
+<p>是不是觉得很麻烦，其实Git已经给我们提示了，使用下面命令即可直接将修改得到问文件提交到本地库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -a -m <span class="s2">&#34;xxx&#34;</span> -- 提交所有已修改的文件，未跟踪的文件不会提交
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="09.png" alt="09"></p>
+<h1 id="总结">总结</h1>
+<h2 id="文件状态">文件状态</h2>
+<ul>
+<li>未跟踪</li>
+<li>已跟踪
+<ul>
+<li>已修改</li>
+<li>未修改</li>
+<li>暂存</li>
+</ul>
+</li>
+</ul>
+<h2 id="基本操作">基本操作</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>初始化本地库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看本地库状态</td>
+</tr>
+<tr>
+<td>git add <file name><br />git add . <br />git add *</td>
+<td>添加指定文件到暂存区 <br /><strong>.</strong>/*****表示所有文件</td>
+</tr>
+<tr>
+<td>git commit -m &ldquo;日志信息&rdquo; &lt;文件&gt;</td>
+<td>添加到本地库 <br />不指定文件默认为全部</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Pure3417</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-01-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">Git</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/git/04/">
+            <span class="next-text nav-default">Git的工作原理</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:18365612600@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/pure3417" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Pure3417</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

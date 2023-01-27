@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Jan 2023 15:31:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 15:45:41 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git的基本操作</title>
+      <link>http://localhost:1313/post/git/05/</link>
+      <pubDate>Thu, 26 Jan 2023 15:45:41 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/git/05/</guid>
+      <description>补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三</description>
+    </item>
+    
     <item>
       <title>Git的工作原理</title>
       <link>http://localhost:1313/post/git/04/</link>
