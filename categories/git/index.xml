@@ -52,5 +52,14 @@
       <description>SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi</description>
     </item>
     
+    <item>
+      <title>Git简介</title>
+      <link>http://localhost:1313/post/git/00/</link>
+      <pubDate>Wed, 25 Jan 2023 03:12:22 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/git/00/</guid>
+      <description>Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。 Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方</description>
+    </item>
+    
   </channel>
 </rss>
