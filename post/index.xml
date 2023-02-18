@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Jan 2023 15:45:41 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 22:21:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VMware下载安装</title>
+      <link>http://localhost:1313/post/linux/01/</link>
+      <pubDate>Fri, 17 Feb 2023 22:21:16 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux/01/</guid>
+      <description>前言：Linux坏境，如果没有条件购买云服务器，电脑性能足够的话，可以在自己的电脑上安装一个虚拟机，然后在虚拟机里面安装一个linux系统。</description>
+    </item>
+    
+    <item>
+      <title>Linux入门</title>
+      <link>http://localhost:1313/post/linux/00/</link>
+      <pubDate>Fri, 17 Feb 2023 22:20:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux/00/</guid>
+      <description>Linux概述 Linux内核最初是由芬兰的林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。 Linux是</description>
+    </item>
+    
     <item>
       <title>Git的基本操作</title>
       <link>http://localhost:1313/post/git/05/</link>

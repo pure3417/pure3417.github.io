@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Pure3417的个人博客</title>
+    <link>http://localhost:1313/categories/linux/</link>
+    <description>Recent content in Linux on Pure3417的个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 17 Feb 2023 22:20:58 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux入门</title>
+      <link>http://localhost:1313/post/linux/00/</link>
+      <pubDate>Fri, 17 Feb 2023 22:20:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux/00/</guid>
+      <description>Linux概述 Linux内核最初是由芬兰的林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。 Linux是</description>
+    </item>
+    
+  </channel>
+</rss>
