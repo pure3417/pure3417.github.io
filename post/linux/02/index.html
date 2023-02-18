@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CentOS图文安装教程 - Pure3417的个人博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pure3417" /><meta name="description" content="CentOS是免费的、开源的、可以重新分发的开源操作系统。全名为“社区企业操作系统（Community Enterprise Operating System）”，提供长期免费升级和更新服务，自由使用。国内最大的服务器操作系统，现在基本所有的互联网公司后台服务器都采用CentOS
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/linux/02/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="CentOS图文安装教程" />
+<meta property="og:description" content="CentOS是免费的、开源的、可以重新分发的开源操作系统。全名为“社区企业操作系统（Community Enterprise Operating System）”，提供长期免费升级和更新服务，自由使用。国内最大的服务器操作系统，现在基本所有的互联网公司后台服务器都采用CentOS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/linux/02/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-02-18T20:22:11+08:00" />
+<meta property="article:modified_time" content="2023-02-18T20:22:11+08:00" />
+<meta itemprop="name" content="CentOS图文安装教程">
+<meta itemprop="description" content="CentOS是免费的、开源的、可以重新分发的开源操作系统。全名为“社区企业操作系统（Community Enterprise Operating System）”，提供长期免费升级和更新服务，自由使用。国内最大的服务器操作系统，现在基本所有的互联网公司后台服务器都采用CentOS"><meta itemprop="datePublished" content="2023-02-18T20:22:11+08:00" />
+<meta itemprop="dateModified" content="2023-02-18T20:22:11+08:00" />
+<meta itemprop="wordCount" content="792">
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CentOS图文安装教程"/>
+<meta name="twitter:description" content="CentOS是免费的、开源的、可以重新分发的开源操作系统。全名为“社区企业操作系统（Community Enterprise Operating System）”，提供长期免费升级和更新服务，自由使用。国内最大的服务器操作系统，现在基本所有的互联网公司后台服务器都采用CentOS"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pure3417的个人博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pure3417的个人博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">CentOS图文安装教程</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-02-18 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装前准备">安装前准备</a></li>
+    <li><a href="#下载镜像文件">下载镜像文件</a></li>
+    <li><a href="#开始安装">开始安装</a>
+      <ul>
+        <li><a href="#一文件--新建虚拟机-或-直接点击-创建新的虚拟机-图标">一、文件 → 新建虚拟机 或 直接点击 创建新的虚拟机 图标</a></li>
+        <li><a href="#二选择-自定义高级下一步">二、选择 自定义（高级），下一步</a></li>
+        <li><a href="#三默认下一步">三、默认，下一步</a></li>
+        <li><a href="#四选择稍后安装系统">四、选择稍后安装系统</a></li>
+        <li><a href="#五选择操作系统和版本">五、选择操作系统和版本</a></li>
+        <li><a href="#六输入虚拟机名称和安装路径">六、输入虚拟机名称和安装路径</a></li>
+        <li><a href="#七向你的电脑借点处理器">七、向你的电脑借点处理器</a></li>
+        <li><a href="#八借内存">八、借内存</a></li>
+        <li><a href="#九选择网络类型">九、选择网络类型</a></li>
+        <li><a href="#十默认推荐下一步">十、默认推荐，下一步</a></li>
+        <li><a href="#十一默认推荐下一步">十一、默认推荐，下一步</a></li>
+        <li><a href="#十二默认下一步">十二、默认，下一步</a></li>
+        <li><a href="#十三借硬盘">十三、借硬盘</a></li>
+        <li><a href="#十四给磁盘文件取个名字默认即可">十四、给磁盘文件取个名字，默认即可</a></li>
+        <li><a href="#十五自定义硬件">十五、自定义硬件</a></li>
+        <li><a href="#十六选择centos安装镜像文件">十六、选择CentOS安装镜像文件</a></li>
+        <li><a href="#十七点击完成">十七、点击完成</a></li>
+      </ul>
+    </li>
+    <li><a href="#初始化配置">初始化配置</a>
+      <ul>
+        <li><a href="#一启动">一、启动</a></li>
+        <li><a href="#二选择第一项install-centos-7回车等待">二、选择第一项，Install CentOS 7，回车，等待</a></li>
+        <li><a href="#三选择安装语言我这里选择的是简体中文">三、选择安装语言，我这里选择的是简体中文</a></li>
+        <li><a href="#四软件选择选择安装方式">四、软件选择，选择安装方式</a></li>
+        <li><a href="#五选择安装方式">五、选择安装方式</a></li>
+        <li><a href="#六安装位置配置">六、安装位置配置</a></li>
+        <li><a href="#七设置安装位置配置分区">七、设置安装位置，配置分区</a></li>
+        <li><a href="#八手动设置分区也可以自动创建它们">八、手动设置分区，也可以自动创建它们</a></li>
+        <li><a href="#九设置网络和主机名">九、设置网络和主机名</a></li>
+        <li><a href="#十开始安装">十、开始安装</a></li>
+        <li><a href="#十一安装系统的同时设置root用户密码同时也可以创建一个普通用户">十一、安装系统的同时设置root用户密码，同时也可以创建一个普通用户</a></li>
+        <li><a href="#十二等待完成安装重启设备">十二、等待，完成安装，重启设备</a></li>
+        <li><a href="#十三接受许可协议最小化安装请忽略">十三、接受许可协议（最小化安装请忽略）</a></li>
+        <li><a href="#十四开始使用">十四、开始使用</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>CentOS是免费的、开源的、可以重新分发的开源操作系统。全名为“社区企业操作系统（Community Enterprise Operating System）”，提供长期免费升级和更新服务，自由使用。国内最大的服务器操作系统，现在基本所有的互联网公司后台服务器都采用CentOS</p>
+<p>官网：<a href="https://www.centos.org/">The CentOS Project</a></p>
+<p><img src="image-20230218205014547.png" alt="image-20230218205014547"></p>
+<h1 id="安装前准备">安装前准备</h1>
+<p>VMware的安装本文不再介绍，参考上一篇文章 <a href="https://pure3417.top/post/linux/01/">VMware下载安装 </a></p>
+<h1 id="下载镜像文件">下载镜像文件</h1>
+<p>官方下载地址：<a href="https://www.centos.org/download/">Download</a></p>
+<p><img src="image-20230218204722327.png" alt="image-20230218204722327"></p>
+<p><img src="image-20230218204938583.png" alt="image-20230218204938583"></p>
+<p><img src="image-20230218205056881.png" alt="image-20230218205056881"></p>
+<h1 id="开始安装">开始安装</h1>
+<h2 id="一文件--新建虚拟机-或-直接点击-创建新的虚拟机-图标">一、文件 → 新建虚拟机 或 直接点击 创建新的虚拟机 图标</h2>
+<p><img src="image-20230218205701421.png" alt="image-20230218205701421"></p>
+<h2 id="二选择-自定义高级下一步">二、选择 自定义（高级），下一步</h2>
+<p><img src="image-20230218205725286.png" alt="image-20230218205725286"></p>
+<h2 id="三默认下一步">三、默认，下一步</h2>
+<p><img src="image-20230218205920178.png" alt="image-20230218205920178"></p>
+<h2 id="四选择稍后安装系统">四、选择稍后安装系统</h2>
+<p><img src="image-20230218210002050.png" alt="image-20230218210002050"></p>
+<h2 id="五选择操作系统和版本">五、选择操作系统和版本</h2>
+<p><img src="image-20230218210027650.png" alt="image-20230218210027650"></p>
+<h2 id="六输入虚拟机名称和安装路径">六、输入虚拟机名称和安装路径</h2>
+<p><img src="image-20230218210152643.png" alt="image-20230218210152643"></p>
+<h2 id="七向你的电脑借点处理器">七、向你的电脑借点处理器</h2>
+<p><img src="image-20230218210547618.png" alt="image-20230218210547618"></p>
+<h2 id="八借内存">八、借内存</h2>
+<p><img src="image-20230218210647877.png" alt="image-20230218210647877"></p>
+<h2 id="九选择网络类型">九、选择网络类型</h2>
+<p><img src="image-20230218210808774.png" alt="image-20230218210808774"></p>
+<h2 id="十默认推荐下一步">十、默认推荐，下一步</h2>
+<p><img src="image-20230218210840597.png" alt="image-20230218210840597"></p>
+<h2 id="十一默认推荐下一步">十一、默认推荐，下一步</h2>
+<p><img src="image-20230218210907916.png" alt="image-20230218210907916"></p>
+<h2 id="十二默认下一步">十二、默认，下一步</h2>
+<p><img src="image-20230218211001536.png" alt="image-20230218211001536"></p>
+<h2 id="十三借硬盘">十三、借硬盘</h2>
+<p>默认磁盘大小是20G，我这里给了50G</p>
+<p><img src="image-20230218211050844.png" alt="image-20230218211050844"></p>
+<h2 id="十四给磁盘文件取个名字默认即可">十四、给磁盘文件取个名字，默认即可</h2>
+<p><img src="image-20230218211314223.png" alt="image-20230218211314223"></p>
+<h2 id="十五自定义硬件">十五、自定义硬件</h2>
+<p><img src="image-20230218211405278.png" alt="image-20230218211405278"></p>
+<h2 id="十六选择centos安装镜像文件">十六、选择CentOS安装镜像文件</h2>
+<p><img src="image-20230218211607762.png" alt="image-20230218211607762"></p>
+<h2 id="十七点击完成">十七、点击完成</h2>
+<p><img src="image-20230218211659804.png" alt="image-20230218211659804"></p>
+<h1 id="初始化配置">初始化配置</h1>
+<h2 id="一启动">一、启动</h2>
+<p><img src="image-20230218211909902.png" alt="image-20230218211909902"></p>
+<h2 id="二选择第一项install-centos-7回车等待">二、选择第一项，Install CentOS 7，回车，等待</h2>
+<p>这里需要将鼠标点进页面呢，通过键盘上下键进行选择</p>
+<p><img src="image-20230218212130555.png" alt="image-20230218212130555"></p>
+<h2 id="三选择安装语言我这里选择的是简体中文">三、选择安装语言，我这里选择的是简体中文</h2>
+<p><img src="image-20230218212331110.png" alt="image-20230218212331110"></p>
+<h2 id="四软件选择选择安装方式">四、软件选择，选择安装方式</h2>
+<p><img src="image-20230218212510181.png" alt="image-20230218212510181"></p>
+<h2 id="五选择安装方式">五、选择安装方式</h2>
+<p>我这里选择的是GNOME 桌面，进行安装。</p>
+<p><img src="image-20230218212834858.png" alt="image-20230218212834858"></p>
+<h2 id="六安装位置配置">六、安装位置配置</h2>
+<p><img src="image-20230218213024886.png" alt="image-20230218213024886"></p>
+<h2 id="七设置安装位置配置分区">七、设置安装位置，配置分区</h2>
+<p><img src="image-20230218213158957.png" alt="image-20230218213158957"></p>
+<h2 id="八手动设置分区也可以自动创建它们">八、手动设置分区，也可以自动创建它们</h2>
+<p>我这里选择的挂载方式是标准分区，当然也可以直接使用默认LVM挂载方式，然后自动创建分区</p>
+<p><img src="image-20230218213647975.png" alt="image-20230218213647975"></p>
+<p><img src="image-20230218213849766.png" alt="image-20230218213849766"></p>
+<p><img src="image-20230218213908428.png" alt="image-20230218213908428"></p>
+<h2 id="九设置网络和主机名">九、设置网络和主机名</h2>
+<p><img src="image-20230218214122128.png" alt="image-20230218214122128"></p>
+<p><img src="image-20230218214149928.png" alt="image-20230218214149928"></p>
+<h2 id="十开始安装">十、开始安装</h2>
+<p><img src="image-20230218214437122.png" alt="image-20230218214437122"></p>
+<h2 id="十一安装系统的同时设置root用户密码同时也可以创建一个普通用户">十一、安装系统的同时设置root用户密码，同时也可以创建一个普通用户</h2>
+<p><img src="image-20230218214641005.png" alt="image-20230218214641005"></p>
+<p><img src="image-20230218214701648.png" alt="image-20230218214701648"></p>
+<h2 id="十二等待完成安装重启设备">十二、等待，完成安装，重启设备</h2>
+<p><img src="image-20230218215845561.png" alt="image-20230218215845561"></p>
+<h2 id="十三接受许可协议最小化安装请忽略">十三、接受许可协议（最小化安装请忽略）</h2>
+<p><img src="image-20230218220109766.png" alt="image-20230218220109766"></p>
+<p><img src="image-20230218220131760.png" alt="image-20230218220131760"></p>
+<p><img src="image-20230218220142993.png" alt="image-20230218220142993"></p>
+<h2 id="十四开始使用">十四、开始使用</h2>
+<p>如果你是最小化安装，会直接进入终端，让你输入用户名，密码（密码为暗文，不显示）</p>
+<p>进入系统，经过简单的配置，右键，打开终端</p>
+<p>输入命令<code>ip a</code>查看本机ip地址</p>
+<p>输入命令<code>ping www.qq.com</code>测试是否联通外网</p>
+<p><img src="image-20230218221109663.png" alt="image-20230218221109663"></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Pure3417</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-02-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/linux/01/">
+            <span class="next-text nav-default">VMware下载安装</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:18365612600@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/pure3417" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Pure3417</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
