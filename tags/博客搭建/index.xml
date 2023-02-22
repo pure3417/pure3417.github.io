@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客搭建 on Pure3417的个人博客</title>
-    <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+    <link>https://pure3417.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
     <description>Recent content in 博客搭建 on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Jan 2023 20:42:09 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Jan 2023 20:42:09 +0800</lastBuildDate><atom:link href="https://pure3417.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo安装与部署</title>
-      <link>http://localhost:1313/post/hugo/</link>
+      <link>https://pure3417.top/post/hugo/</link>
       <pubDate>Tue, 24 Jan 2023 20:42:09 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/hugo/</guid>
+      <guid>https://pure3417.top/post/hugo/</guid>
       <description>Hugo简介 Hugo官网https://gohugo.io/ Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，</description>
     </item>
     

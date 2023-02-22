@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Pure3417的个人博客</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://pure3417.top/categories/</link>
     <description>Recent content in Categories on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Feb 2023 22:20:58 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 22:20:58 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
+      <link>https://pure3417.top/categories/linux/</link>
       <pubDate>Fri, 17 Feb 2023 22:20:58 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/linux/</guid>
+      <guid>https://pure3417.top/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/categories/git/</link>
+      <link>https://pure3417.top/categories/git/</link>
       <pubDate>Thu, 26 Jan 2023 15:45:41 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/git/</guid>
+      <guid>https://pure3417.top/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1313/categories/hugo/</link>
+      <link>https://pure3417.top/categories/hugo/</link>
       <pubDate>Tue, 24 Jan 2023 20:42:09 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/hugo/</guid>
+      <guid>https://pure3417.top/categories/hugo/</guid>
       <description></description>
     </item>
     

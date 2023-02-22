@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Pure3417的个人博客</title>
-    <link>http://localhost:1313/categories/git/</link>
+    <link>https://pure3417.top/categories/git/</link>
     <description>Recent content in Git on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Jan 2023 15:45:41 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 15:45:41 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git的基本操作</title>
-      <link>http://localhost:1313/post/git/05/</link>
+      <link>https://pure3417.top/post/git/05/</link>
       <pubDate>Thu, 26 Jan 2023 15:45:41 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/05/</guid>
+      <guid>https://pure3417.top/post/git/05/</guid>
       <description>补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三</description>
     </item>
     
     <item>
       <title>Git的工作原理</title>
-      <link>http://localhost:1313/post/git/04/</link>
+      <link>https://pure3417.top/post/git/04/</link>
       <pubDate>Thu, 26 Jan 2023 15:31:40 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/04/</guid>
+      <guid>https://pure3417.top/post/git/04/</guid>
       <description>工作区域 git本地有三个工作区域 工作目录(working Directory)、暂存区(Stage/Index)、资源库(Repository</description>
     </item>
     
     <item>
       <title>Git基本配置</title>
-      <link>http://localhost:1313/post/git/03/</link>
+      <link>https://pure3417.top/post/git/03/</link>
       <pubDate>Thu, 26 Jan 2023 10:55:02 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/03/</guid>
+      <guid>https://pure3417.top/post/git/03/</guid>
       <description>&lt;p&gt;前提已安装好Git，Git安装流程请查看&lt;a href=&#34;http://pure3417.top/post/git/installgit/&#34;&gt;Git的卸载与安装&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git的卸载与安装</title>
-      <link>http://localhost:1313/post/git/02/</link>
+      <link>https://pure3417.top/post/git/02/</link>
       <pubDate>Wed, 25 Jan 2023 19:19:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/02/</guid>
+      <guid>https://pure3417.top/post/git/02/</guid>
       <description>卸载 win 清理环境变量 右键我的电脑&amp;mdash;&amp;gt;属性&amp;mdash;&amp;gt;高级系统设置&amp;mdash;&amp;gt;环境变量&amp;mdash;&amp;gt</description>
     </item>
     
     <item>
       <title>Git与SVN的差异比较</title>
-      <link>http://localhost:1313/post/git/01/</link>
+      <link>https://pure3417.top/post/git/01/</link>
       <pubDate>Wed, 25 Jan 2023 18:43:47 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/01/</guid>
+      <guid>https://pure3417.top/post/git/01/</guid>
       <description>SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi</description>
     </item>
     
     <item>
       <title>Git简介</title>
-      <link>http://localhost:1313/post/git/00/</link>
+      <link>https://pure3417.top/post/git/00/</link>
       <pubDate>Wed, 25 Jan 2023 03:12:22 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/git/00/</guid>
+      <guid>https://pure3417.top/post/git/00/</guid>
       <description>Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。 Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方</description>
     </item>
     
