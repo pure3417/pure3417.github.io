@@ -2,21 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pure3417.top/post/linux/02/</loc>
-    <lastmod>2023-02-18T20:22:11+08:00</lastmod>
+    <loc>https://pure3417.top/about/</loc>
+    <lastmod>2023-02-23T18:30:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/categories/</loc>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/tags/linux/</loc>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/categories/linux/</loc>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/post/linux/03/</loc>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://pure3417.top/post/</loc>
-    <lastmod>2023-02-18T20:22:11+08:00</lastmod>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://pure3417.top/</loc>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/tags/</loc>
+    <lastmod>2023-02-23T18:28:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/post/linux/02/</loc>
     <lastmod>2023-02-18T20:22:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -30,35 +72,7 @@
   </url>
   
   <url>
-    <loc>https://pure3417.top/categories/</loc>
-    <lastmod>2023-02-17T22:20:58+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://pure3417.top/tags/linux/</loc>
-    <lastmod>2023-02-17T22:20:58+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://pure3417.top/categories/linux/</loc>
-    <lastmod>2023-02-17T22:20:58+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://pure3417.top/post/linux/00/</loc>
-    <lastmod>2023-02-17T22:20:58+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://pure3417.top/tags/</loc>
     <lastmod>2023-02-17T22:20:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

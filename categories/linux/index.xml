@@ -6,7 +6,37 @@
     <description>Recent content in Linux on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Feb 2023 22:20:58 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 18:28:41 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux基础-文件系统</title>
+      <link>https://pure3417.top/post/linux/03/</link>
+      <pubDate>Thu, 23 Feb 2023 18:28:41 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/03/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+&lt;p&gt;在计算机的文件系统中，&lt;strong&gt;根目录指文件系统的最上一级文件目录&lt;/strong&gt;，它是相对子根目录来说的；它如同一棵大树的“根”一般，全部的树杈以它为起点，故被取名为根目录。以微软公司开发设计的Windows操作系统为例：点开这台电脑（我的电脑、计算机），双击鼠标C盘就进入C盘的根目录。双击鼠标D盘就进入D盘的根目录。&lt;/p&gt;
+&lt;p&gt;在Linux世界里，一切皆文件。&lt;/p&gt;
+&lt;p&gt;Linux文件系统是采用层级式的树状目录结构，根目录是“/”&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CentOS图文安装教程</title>
+      <link>https://pure3417.top/post/linux/02/</link>
+      <pubDate>Sat, 18 Feb 2023 20:22:11 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/02/</guid>
+      <description>&lt;p&gt;CentOS是免费的、开源的、可以重新分发的开源操作系统。全名为“社区企业操作系统（Community Enterprise Operating System）”，提供长期免费升级和更新服务，自由使用。国内最大的服务器操作系统，现在基本所有的互联网公司后台服务器都采用CentOS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VMware下载安装</title>
+      <link>https://pure3417.top/post/linux/01/</link>
+      <pubDate>Fri, 17 Feb 2023 22:21:16 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/01/</guid>
+      <description>前言：Linux坏境，如果没有条件购买云服务器，电脑性能足够的话，可以在自己的电脑上安装一个虚拟机，然后在虚拟机里面安装一个linux系统。</description>
+    </item>
+    
     <item>
       <title>Linux入门</title>
       <link>https://pure3417.top/post/linux/00/</link>
