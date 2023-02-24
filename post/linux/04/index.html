@@ -51,7 +51,7 @@
 <meta itemprop="description" content="VIM 是 Linux 系统上一款文本编辑器，它是操作 Linux 的一款利器。
 当前有很多优秀的 IDE 都支持安装 VIM 插件，原因就是使用它便捷，高效，很爽！"><meta itemprop="datePublished" content="2023-02-24T13:56:22+08:00" />
 <meta itemprop="dateModified" content="2023-02-24T13:56:22+08:00" />
-<meta itemprop="wordCount" content="943">
+<meta itemprop="wordCount" content="1012">
 <meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux基础-VI/VIM编辑器"/>
 <meta name="twitter:description" content="VIM 是 Linux 系统上一款文本编辑器，它是操作 Linux 的一款利器。
@@ -135,8 +135,8 @@
         <div class="post-category">
             <a href="/categories/linux/"> Linux </a>
             </div>
-          <span class="more-meta"> 约 943 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 1012 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -156,6 +156,7 @@
       </ul>
     </li>
     <li><a href="#指令模式">指令模式</a></li>
+    <li><a href="#vivim键位图">vi/vim键位图</a></li>
   </ul>
 </nav>
   </div>
@@ -257,7 +258,6 @@ VIM 编辑器是从VI 发展出来的一个性能更强大的文本编辑器。�
 </tr>
 </tbody>
 </table>
-<p><img src="vi-vim-cheat-sheet-sch1.gif" alt="vi-vim-cheat-sheet-sch1"></p>
 <h1 id="编辑模式">编辑模式</h1>
 <p>在一般模式中可以进行删除、复制、粘贴等的动作，但是却无法编辑文件内容的！要
 等到你按下<strong>i, I, o, O, a, A</strong>等任何一个字母之后才会进入编辑模式。
@@ -345,15 +345,29 @@ VIM 编辑器是从VI 发展出来的一个性能更强大的文本编辑器。�
 <td>关闭行号</td>
 </tr>
 <tr>
-<td>:%s/old/new/g</td>
-<td>替换内容 ，/g替换匹配到的所有内容</td>
-</tr>
-<tr>
 <td>:noh</td>
 <td>取消高亮显示</td>
 </tr>
+<tr>
+<td>:s/old/new</td>
+<td>替换当前行匹配到的第一个old为new</td>
+</tr>
+<tr>
+<td>:s/old/new/g</td>
+<td>替换当前行匹配到的所有old为new</td>
+</tr>
+<tr>
+<td>:%s/old/new</td>
+<td>替换每一行匹配到的第一个old为new</td>
+</tr>
+<tr>
+<td>:%s/old/new/g</td>
+<td>替换文档中匹配到的所有old为new</td>
+</tr>
 </tbody>
 </table>
+<h1 id="vivim键位图">vi/vim键位图</h1>
+<p><img src="vi-vim-cheat-sheet-sch1.gif" alt="vi-vim-cheat-sheet-sch1"></p>
     </div>
 
     <div class="post-copyright">
@@ -376,7 +390,11 @@ VIM 编辑器是从VI 发展出来的一个性能更强大的文本编辑器。�
           <a href="/tags/linux/">Linux</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/linux/05/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux基础-网络配置</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/post/linux/03/">
             <span class="next-text nav-default">linux基础-文件系统</span>
             <span class="next-text nav-mobile">下一篇</span>
