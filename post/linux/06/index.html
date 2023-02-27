@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Pure3417" /><meta name="description" content="查看网络IP 和网关 查看虚拟网络编辑器 修改虚拟网卡IP 查看网关 查看windows 环境的中VMnet8 网络配置 配置网络IP地址 ifconfig 配置网络接口 1 2" /><meta name="keywords" content="Linux, CentOS7配置静态IP" />
+<meta name="author" content="Pure3417" /><meta name="description" content="我们目前安装的Linux操作系统，安装完毕之后并没有配置IP地址，默认IP地址是动态获取的，那如果我们使用该Linux服务器部署项目，IP动态获取的话，也就意味着，IP地址可能会发生变动，那我们访问项目的话就会非常繁琐，所以作为服务器，我们一般还需要把IP地址设置为静态的。
+" /><meta name="keywords" content="Linux, CentOS7配置静态IP" />
 
 
 
@@ -40,18 +41,18 @@
 
 
 <meta property="og:title" content="Linux基础-CentOS7配置静态IP" />
-<meta property="og:description" content="查看网络IP 和网关 查看虚拟网络编辑器 修改虚拟网卡IP 查看网关 查看windows 环境的中VMnet8 网络配置 配置网络IP地址 ifconfig 配置网络接口 1 2" />
+<meta property="og:description" content="我们目前安装的Linux操作系统，安装完毕之后并没有配置IP地址，默认IP地址是动态获取的，那如果我们使用该Linux服务器部署项目，IP动态获取的话，也就意味着，IP地址可能会发生变动，那我们访问项目的话就会非常繁琐，所以作为服务器，我们一般还需要把IP地址设置为静态的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pure3417.top/post/linux/06/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-02-27T14:53:30+08:00" />
 <meta property="article:modified_time" content="2023-02-27T14:53:30+08:00" />
 <meta itemprop="name" content="Linux基础-CentOS7配置静态IP">
-<meta itemprop="description" content="查看网络IP 和网关 查看虚拟网络编辑器 修改虚拟网卡IP 查看网关 查看windows 环境的中VMnet8 网络配置 配置网络IP地址 ifconfig 配置网络接口 1 2"><meta itemprop="datePublished" content="2023-02-27T14:53:30+08:00" />
+<meta itemprop="description" content="我们目前安装的Linux操作系统，安装完毕之后并没有配置IP地址，默认IP地址是动态获取的，那如果我们使用该Linux服务器部署项目，IP动态获取的话，也就意味着，IP地址可能会发生变动，那我们访问项目的话就会非常繁琐，所以作为服务器，我们一般还需要把IP地址设置为静态的。"><meta itemprop="datePublished" content="2023-02-27T14:53:30+08:00" />
 <meta itemprop="dateModified" content="2023-02-27T14:53:30+08:00" />
-<meta itemprop="wordCount" content="545">
+<meta itemprop="wordCount" content="931">
 <meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux基础-CentOS7配置静态IP"/>
-<meta name="twitter:description" content="查看网络IP 和网关 查看虚拟网络编辑器 修改虚拟网卡IP 查看网关 查看windows 环境的中VMnet8 网络配置 配置网络IP地址 ifconfig 配置网络接口 1 2"/>
+<meta name="twitter:description" content="我们目前安装的Linux操作系统，安装完毕之后并没有配置IP地址，默认IP地址是动态获取的，那如果我们使用该Linux服务器部署项目，IP动态获取的话，也就意味着，IP地址可能会发生变动，那我们访问项目的话就会非常繁琐，所以作为服务器，我们一般还需要把IP地址设置为静态的。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -131,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> Linux </a>
             </div>
-          <span class="more-meta"> 约 545 字 </span>
+          <span class="more-meta"> 约 931 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -156,12 +157,14 @@
         </li>
       </ul>
     </li>
+    <li><a href="#修改ip-地址后可能会遇到的问题">修改IP 地址后可能会遇到的问题</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h1 id="查看网络ip-和网关">查看网络IP 和网关</h1>
+      <p>我们目前安装的Linux操作系统，安装完毕之后并没有配置IP地址，默认IP地址是动态获取的，那如果我们使用该Linux服务器部署项目，IP动态获取的话，也就意味着，IP地址可能会发生变动，那我们访问项目的话就会非常繁琐，所以作为服务器，我们一般还需要把IP地址设置为静态的。</p>
+<h1 id="查看网络ip-和网关">查看网络IP 和网关</h1>
 <ul>
 <li>
 <p>查看虚拟网络编辑器</p>
@@ -263,6 +266,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="修改ip配置文件">修改IP配置文件</h3>
+<p><font color="blue">注意：IP 地址配置到与上面查看的网关在同一网段</font></p>
 <p>以下框选的项必须修改，有值的按照下面的值修改，没有该项的要增加。</p>
 <p><img src="image-20230227153742678.png" alt="image-20230227153742678"></p>
 <p>修改后配置文件如下：</p>
@@ -328,7 +332,19 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="image-20230227154210081.png" alt="image-20230227154210081"></p>
-
+<h1 id="修改ip-地址后可能会遇到的问题">修改IP 地址后可能会遇到的问题</h1>
+<ul>
+<li>物理机能ping 通虚拟机，但是虚拟机ping 不通物理机,一般都是因为物理机的防火墙问题,把防火墙关闭就行</li>
+<li>虚拟机能Ping 通物理机,但是虚拟机Ping 不通外网,一般都是因为DNS 的设置有问题</li>
+<li>虚拟机Ping <a href="https://www.baidu.com">www.baidu.com</a> 显示域名未知等信息,一般查GATEWAY 和DNS 设置是否正确</li>
+<li>如果以上全部设置完还是不行，需要关闭NetworkManager 服务
+<ul>
+<li>systemctl stop NetworkManager 关闭</li>
+<li>systemctl disable NetworkManager 禁用</li>
+</ul>
+</li>
+<li>如果检查发现systemctl status network 有问题需要检查ifcfg-ens33</li>
+</ul>
     </div>
 
     <div class="post-copyright">
