@@ -6,7 +6,16 @@
     <description>Recent content on Pure3417的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 24 Feb 2023 19:21:46 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 14:53:30 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux基础-CentOS7配置静态IP</title>
+      <link>https://pure3417.top/post/linux/06/</link>
+      <pubDate>Mon, 27 Feb 2023 14:53:30 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/06/</guid>
+      <description>查看网络IP 和网关 查看虚拟网络编辑器 修改虚拟网卡IP 查看网关 查看windows 环境的中VMnet8 网络配置 配置网络IP地址 ifconfig 配置网络接口 1 2</description>
+    </item>
+    
     <item>
       <title>VMware虚拟机的三种网络模式</title>
       <link>https://pure3417.top/post/linux/05/</link>
