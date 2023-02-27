@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://pure3417.top/post/linux/05/</loc>
-    <lastmod>2023-02-24T19:21:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://pure3417.top/post/</loc>
     <lastmod>2023-02-24T19:21:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -45,6 +38,13 @@
   
   <url>
     <loc>https://pure3417.top/tags/</loc>
+    <lastmod>2023-02-24T19:21:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pure3417.top/post/linux/05/</loc>
     <lastmod>2023-02-24T19:21:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

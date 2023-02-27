@@ -8,12 +8,19 @@
     <language>zh-cn</language>
     <lastBuildDate>Fri, 24 Feb 2023 19:21:46 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linux基础-网络配置</title>
+      <title>VMware虚拟机的三种网络模式</title>
       <link>https://pure3417.top/post/linux/05/</link>
       <pubDate>Fri, 24 Feb 2023 19:21:46 +0800</pubDate>
       
       <guid>https://pure3417.top/post/linux/05/</guid>
-      <description></description>
+      <description>&lt;p&gt;在安装 VMware 之后，宿主机和VMware上会出现几个相关的虚拟设备，每个设备的功能如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VMnet0&lt;/strong&gt;：桥接（Bridge）模式下的虚拟交换机。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VMnet1&lt;/strong&gt;：仅主机（Host-only）模式下的虚拟交换机。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VMnet8&lt;/strong&gt;：NAT 模式下的虚拟交换机。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VMware Network Adapter VMnet1&lt;/strong&gt;：宿主机与 Host-only 虚拟网络进行通信的虚拟网卡。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VMware Network Adapter VMnet8&lt;/strong&gt;：宿主机与 NAT 虚拟网络进行通信的虚拟网卡。&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
