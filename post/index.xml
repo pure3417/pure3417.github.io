@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Mar 2023 20:33:43 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 19:03:52 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-帮助命令及常用快捷键</title>
+      <link>https://pure3417.top/post/linux/09/</link>
+      <pubDate>Fri, 28 Apr 2023 19:03:52 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/09/</guid>
+      <description>&lt;p&gt;Shell 可以看作是一个命令解释器，为我们提供了交互式的文本控制台界面。我们可以通过终端控制台来输入命令，由shell 进行解释并最终交给内核执行。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>00</title>
       <link>https://pure3417.top/post/html/00/</link>
