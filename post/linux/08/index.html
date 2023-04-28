@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Linux基础-服务管理 - Pure3417的个人博客</title>
+  <title>Linux基础-系统管理 - Pure3417</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Pure3417" /><meta name="description" content="" /><meta name="keywords" content="Linux, CentOS7服务管理" />
+<meta name="author" content="Pure3417" /><meta name="description" content="Linux系统启动时会启动很多系统服务进程，这些系统服务进程没有控制终端，不能直接和用户交互。其他进程都是在用户登录或运行程序时创建，在运行结束或用户注销时终止，但系统服务进程不受用户登录注销的影响，它们一直在运行着，这种进程有一个名称叫守护进程（Daemon）。
+" /><meta name="keywords" content="Linux, CentOS 7 系统管理" />
 
 
 
@@ -39,19 +40,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Linux基础-服务管理" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="Linux基础-系统管理" />
+<meta property="og:description" content="Linux系统启动时会启动很多系统服务进程，这些系统服务进程没有控制终端，不能直接和用户交互。其他进程都是在用户登录或运行程序时创建，在运行结束或用户注销时终止，但系统服务进程不受用户登录注销的影响，它们一直在运行着，这种进程有一个名称叫守护进程（Daemon）。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pure3417.top/post/linux/08/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-02-27T16:35:44+08:00" />
 <meta property="article:modified_time" content="2023-02-27T16:35:44+08:00" />
-<meta itemprop="name" content="Linux基础-服务管理">
-<meta itemprop="description" content=""><meta itemprop="datePublished" content="2023-02-27T16:35:44+08:00" />
+<meta itemprop="name" content="Linux基础-系统管理">
+<meta itemprop="description" content="Linux系统启动时会启动很多系统服务进程，这些系统服务进程没有控制终端，不能直接和用户交互。其他进程都是在用户登录或运行程序时创建，在运行结束或用户注销时终止，但系统服务进程不受用户登录注销的影响，它们一直在运行着，这种进程有一个名称叫守护进程（Daemon）。"><meta itemprop="datePublished" content="2023-02-27T16:35:44+08:00" />
 <meta itemprop="dateModified" content="2023-02-27T16:35:44+08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="1323">
 <meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux基础-服务管理"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Linux基础-系统管理"/>
+<meta name="twitter:description" content="Linux系统启动时会启动很多系统服务进程，这些系统服务进程没有控制终端，不能直接和用户交互。其他进程都是在用户登录或运行程序时创建，在运行结束或用户注销时终止，但系统服务进程不受用户登录注销的影响，它们一直在运行着，这种进程有一个名称叫守护进程（Daemon）。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -66,7 +67,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Pure3417的个人博客</a>
+    <a href="/" class="logo">Pure3417</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -80,10 +81,10 @@
         <li class="mobile-menu-item">主页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
       </a>
   </ul>
 
@@ -95,7 +96,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Pure3417的个人博客</a>
+  <a href="/" class="logo">Pure3417</a>
 </div>
 
 
@@ -109,9 +110,9 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
       </li>
   </ul>
 </nav>
@@ -124,15 +125,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Linux基础-服务管理</h1>
+      <h1 class="post-title">Linux基础-系统管理</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2023-02-27 </span>
         <div class="post-category">
             <a href="/categories/linux/"> Linux </a>
             </div>
-          <span class="more-meta"> 约 0 字 </span>
-          <span class="more-meta"> 预计阅读 0 分钟 </span>
+          <span class="more-meta"> 约 1323 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -140,11 +141,285 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux中的进程和服务">Linux中的进程和服务</a></li>
+    <li><a href="#系统运行级别">系统运行级别</a>
+      <ul>
+        <li><a href="#linux开机启动流程图">Linux开机启动流程图</a></li>
+        <li><a href="#centos6的运行级别">CentOS6的运行级别</a></li>
+        <li><a href="#centos7的运行级别">CentOS7的运行级别</a></li>
+      </ul>
+    </li>
+    <li><a href="#服务管理">服务管理</a>
+      <ul>
+        <li><a href="#service-服务管理centos-6-版本-了解">service 服务管理（CentOS 6 版本-了解）</a></li>
+        <li><a href="#systemctl服务管理centos-7-版本-重点掌握">systemctl服务管理（CentOS 7 版本-重点掌握）</a></li>
+      </ul>
+    </li>
+    <li><a href="#设置后台自启动">设置后台自启动</a>
+      <ul>
+        <li><a href="#chkconfig-设置后台服务的自启配置centos-6-版本">chkconfig 设置后台服务的自启配置（CentOS 6 版本）</a></li>
+        <li><a href="#systemctl-设置后台服务的自启配置">systemctl 设置后台服务的自启配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      
+      <p>Linux系统启动时会启动很多系统服务进程，这些系统服务进程没有控制终端，不能直接和用户交互。其他进程都是在用户登录或运行程序时创建，在运行结束或用户注销时终止，但系统服务进程不受用户登录注销的影响，它们一直在运行着，这种进程有一个名称叫守护进程（Daemon）。</p>
+<h1 id="linux中的进程和服务">Linux中的进程和服务</h1>
+<ul>
+<li>计算机中，一个正在执行的程序或命令，被叫做“进程”( process)。</li>
+<li>启动之后一直存在、常驻内存的进程，一般被称作 “服务”(service)。</li>
+<li>守护进程也称精灵进程（Daemon），是运行在后台的一种特殊进程，它独立于控制终端并且周期性地执行某种任务或等待处理某些发生的事件。</li>
+</ul>
+<h1 id="系统运行级别">系统运行级别</h1>
+<h2 id="linux开机启动流程图">Linux开机启动流程图</h2>
+<p>这里先做一个简单了解</p>
+<p><img src="image-20230306214325752.png" alt="image-20230306214325752"></p>
+<h2 id="centos6的运行级别">CentOS6的运行级别</h2>
+<p>Linux系统有7种运行级别(runlevel):</p>
+<ul>
+<li>运行级别 0：系统停机状态，系统默认运行级别不能设为0，否则不能正常启动运行</li>
+<li>运行级别 1：单用户工作状态，root权限，用于系统维护，找回丢失root密码，禁止远程登陆</li>
+<li>运行级别 2：多用户状态没有网络服务(没有NFS)，不支持网络</li>
+<li>运行级别 3：多用户状态有网络服务(有NFS)，登陆后进入控制台命令行模式</li>
+<li>运行级别 4：系统未使用，保留给用户</li>
+<li>运行级别 5：图形界面</li>
+<li>运行级别 6：系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动</li>
+</ul>
+<p>常用运行级别是<strong>3和5</strong>，工作中一般用3，也可以指定默认运行级别</p>
+<h2 id="centos7的运行级别">CentOS7的运行级别</h2>
+<p>CentOS7 的运行级别简化为：</p>
+<ul>
+<li><strong>multi-user.target</strong> 等价于原运行级别3（多用户有网，无图形界面）</li>
+<li><strong>graphical.target</strong> 等价于原运行级别5（多用户有网，有图形界面）</li>
+</ul>
+<h1 id="服务管理">服务管理</h1>
+<h2 id="service-服务管理centos-6-版本-了解">service 服务管理（CentOS 6 版本-了解）</h2>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service 服务名 start <span class="p">|</span> stop <span class="p">|</span> restart <span class="p">|</span> status
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查看服务</p>
+<p>查看<code>/etc/init.d</code>目录，发现只有两个服务保留在service</p>
+<p><img src="image-20230306210429079.png" alt="image-20230306210429079"></p>
+</li>
+<li>
+<p>实操案例</p>
+<ul>
+<li>
+<p>查看网络服务状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service network status
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>停止网络服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service network stop
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>启动网络服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service network start
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>重启网络服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service network restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h2 id="systemctl服务管理centos-7-版本-重点掌握">systemctl服务管理（CentOS 7 版本-重点掌握）</h2>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl start <span class="p">|</span> stop <span class="p">|</span> restart <span class="p">|</span> status 服务名
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查看服务</p>
+<p>查看<code>usr/lib/systemd/sytem</code>目录</p>
+<p><img src="image-20230428183343139.png" alt="image-20230428183343139"></p>
+</li>
+<li>
+<p>实操案例</p>
+<ul>
+<li>
+<p>查看服务器防火墙状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systenctl status firewalld
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="image-20230428183905784.png" alt="image-20230428183905784"></p>
+</li>
+<li>
+<p>启动/关闭/重启服务器防火墙</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl start firewalld  <span class="c1"># 启动服务器防火墙</span>
+</span></span><span class="line"><span class="cl">systemctl start firewalld  <span class="c1"># 关闭服务器防火墙</span>
+</span></span><span class="line"><span class="cl">systemctl start firewalld  <span class="c1"># 重启服务器防火墙</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="image-20230428184334981.png" alt="image-20230428184334981"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="设置后台自启动">设置后台自启动</h1>
+<h2 id="chkconfig-设置后台服务的自启配置centos-6-版本">chkconfig 设置后台服务的自启配置（CentOS 6 版本）</h2>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chkconfig  <span class="c1"># 功能描述：查看所有服务器自启配置</span>
+</span></span><span class="line"><span class="cl">chkconfig 服务名 off  <span class="c1"># 功能描述：关掉指定服务的自动启动</span>
+</span></span><span class="line"><span class="cl">chkconfig 服务名 on  <span class="c1"># 功能描述：开启指定服务的自动启动</span>
+</span></span><span class="line"><span class="cl">chkconfig 服务名 --list  <span class="c1"># 功能描述：查看服务开机启动状态</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>实操案例</p>
+<ul>
+<li>
+<p>查看network(网络)服务开机启动状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chkconfig network --list 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="image-20230428180717699.png" alt="image-20230428180717699"></p>
+</li>
+<li>
+<p>开启/关闭network(网络)服务的自启动服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chkconfig network on  <span class="c1"># 开启network(网络)服务的自启动服务</span>
+</span></span><span class="line"><span class="cl">chkconfig network off  <span class="c1"># 关闭network(网络)服务的自启动服务</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>开启/关闭network(网络)服务指定级别的自动启动</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chkconfig --level 指定级别 network on
+</span></span><span class="line"><span class="cl">chkconfig --level 指定级别 network off
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="image-20230428181418820.png" alt="image-20230428181418820"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="systemctl-设置后台服务的自启配置">systemctl 设置后台服务的自启配置</h2>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl list-unit-files  <span class="c1"># 功能描述：查看服务开机启动状态</span>
+</span></span><span class="line"><span class="cl">systemctl disable service_name  <span class="c1"># 功能描述：关掉指定服务的自动启动</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> service_name  <span class="c1"># 功能描述：开启指定服务的自动启动</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>实操案例</p>
+<ul>
+<li>
+<p>开启关闭iptable(防火墙)服务的自启动</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> firewalld.service  <span class="c1"># 启动防火墙自启动</span>
+</span></span><span class="line"><span class="cl">systemctl disable firewalld.service  <span class="c1"># 关闭防火墙自启动</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="image-20230428185151948.png" alt="image-20230428185151948"></p>
+</li>
+</ul>
+</li>
+</ul>
     </div>
 
     <div class="post-copyright">
@@ -167,7 +442,11 @@
           <a href="/tags/linux/">Linux</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/html/00/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">00</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/post/linux/07/">
             <span class="next-text nav-default">Linux基础-远程登录</span>
             <span class="next-text nav-mobile">下一篇</span>
@@ -179,43 +458,10 @@
         </div>
         
 
+  
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="pure3417/pure3417.github.io"
-        data-repo-id="R_kgDOI0UuIQ"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOI0UuIc4CUqM-"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
 
       </div>
     </main>

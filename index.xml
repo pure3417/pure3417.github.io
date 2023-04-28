@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pure3417的个人博客</title>
+    <title>Pure3417</title>
     <link>https://pure3417.top/</link>
-    <description>Recent content on Pure3417的个人博客</description>
+    <description>Recent content on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Feb 2023 16:35:44 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 20:33:43 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linux基础-服务管理</title>
+      <title>00</title>
+      <link>https://pure3417.top/post/html/00/</link>
+      <pubDate>Tue, 21 Mar 2023 20:33:43 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/html/00/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux基础-系统管理</title>
       <link>https://pure3417.top/post/linux/08/</link>
       <pubDate>Mon, 27 Feb 2023 16:35:44 +0800</pubDate>
       
       <guid>https://pure3417.top/post/linux/08/</guid>
-      <description></description>
+      <description>&lt;p&gt;Linux系统启动时会启动很多系统服务进程，这些系统服务进程没有控制终端，不能直接和用户交互。其他进程都是在用户登录或运行程序时创建，在运行结束或用户注销时终止，但系统服务进程不受用户登录注销的影响，它们一直在运行着，这种进程有一个名称叫守护进程（Daemon）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -164,10 +173,10 @@
     
     <item>
       <title>Hugo安装与部署</title>
-      <link>https://pure3417.top/post/hugo/</link>
+      <link>https://pure3417.top/post/hugo/00/</link>
       <pubDate>Tue, 24 Jan 2023 20:42:09 +0800</pubDate>
       
-      <guid>https://pure3417.top/post/hugo/</guid>
+      <guid>https://pure3417.top/post/hugo/00/</guid>
       <description>Hugo简介 Hugo官网https://gohugo.io/ Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，</description>
     </item>
     
