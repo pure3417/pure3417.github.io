@@ -6,7 +6,37 @@
     <description>Recent content on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 28 Apr 2023 20:31:55 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 21:25:10 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-常用命令-文件的查看及追加内容</title>
+      <link>https://pure3417.top/post/linux/11/</link>
+      <pubDate>Sun, 30 Apr 2023 21:25:10 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/11/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;转义字符&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;\&lt;/td&gt;
+&lt;td&gt;取消字符转义，例如：&lt;code&gt;\\&lt;/code&gt;即为输出&lt;code&gt;\&lt;/code&gt;本身&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\t&lt;/td&gt;
+&lt;td&gt;制表符，也就是Tab键&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\n&lt;/td&gt;
+&lt;td&gt;换行符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-文件目录操作</title>
       <link>https://pure3417.top/post/linux/10/</link>

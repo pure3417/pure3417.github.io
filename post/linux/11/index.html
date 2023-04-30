@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux实操-常用命令-文件的查看及追加内容 - Pure3417</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pure3417" /><meta name="description" content=" 转义字符 说明 \ 取消字符转义，例如：\\即为输出\本身 \t 制表符，也就是Tab键 \n 换行符 " /><meta name="keywords" content="Linux, CentOS 7 常用命令" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="https://pure3417.top/post/linux/11/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux实操-常用命令-文件的查看及追加内容" />
+<meta property="og:description" content="
+
+
+转义字符
+说明
+
+
+
+
+\
+取消字符转义，例如：\\即为输出\本身
+
+
+\t
+制表符，也就是Tab键
+
+
+\n
+换行符
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pure3417.top/post/linux/11/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-04-30T21:25:10+08:00" />
+<meta property="article:modified_time" content="2023-04-30T21:25:10+08:00" />
+<meta itemprop="name" content="Linux实操-常用命令-文件的查看及追加内容">
+<meta itemprop="description" content="
+
+
+转义字符
+说明
+
+
+
+
+\
+取消字符转义，例如：\\即为输出\本身
+
+
+\t
+制表符，也就是Tab键
+
+
+\n
+换行符
+
+
+"><meta itemprop="datePublished" content="2023-04-30T21:25:10+08:00" />
+<meta itemprop="dateModified" content="2023-04-30T21:25:10+08:00" />
+<meta itemprop="wordCount" content="727">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux实操-常用命令-文件的查看及追加内容"/>
+<meta name="twitter:description" content="
+
+
+转义字符
+说明
+
+
+
+
+\
+取消字符转义，例如：\\即为输出\本身
+
+
+\t
+制表符，也就是Tab键
+
+
+\n
+换行符
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pure3417</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pure3417</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux实操-常用命令-文件的查看及追加内容</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-04-30 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 727 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cat查看文件内容">cat：查看文件内容</a></li>
+    <li><a href="#more分屏查看内容">more：分屏查看内容</a></li>
+    <li><a href="#less分屏显示文件内容">less：分屏显示文件内容</a></li>
+    <li><a href="#head显示文件头部内容">head：显示文件头部内容</a></li>
+    <li><a href="#tail输出文件尾部内容">tail：输出文件尾部内容</a></li>
+    <li><a href="#echo输出内容到控制台">echo：输出内容到控制台</a></li>
+    <li><a href="#-输出重定向内容--追加内容">&gt; 输出重定向内容 &raquo; 追加内容</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td>取消字符转义，例如：<code>\\</code>即为输出<code>\</code>本身</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符，也就是Tab键</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符</td>
+</tr>
+</tbody>
+</table>
+<h1 id="cat查看文件内容">cat：查看文件内容</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat 文件  <span class="c1"># concatenate的缩写，功能描述：查看文件内容，从第一行开始</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430203956840.png" alt="image-20230430203956840"></p>
+</li>
+<li>
+<p>经验技巧</p>
+<p>一般查看比较小的文件，一屏幕能显示全的。</p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430203948842.png" alt="image-20230430203948842"></p>
+</li>
+</ul>
+<h1 id="more分屏查看内容">more：分屏查看内容</h1>
+<p>more 指令是一个基于VI 编辑器的文本过滤器，它以全屏幕的方式按页显示文本文件的内容。more 指令中内置了若干快捷键，详见操作说明。</p>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">more 文件名  <span class="c1"># 功能描述：分屏查看文件内容</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>操作说明</p>
+<p><img src="image-20230430204726691.png" alt="image-20230430204726691"></p>
+</li>
+</ul>
+<h1 id="less分屏显示文件内容">less：分屏显示文件内容</h1>
+<p>less 指令用来分屏查看文件内容，它的功能与more 指令类似，但是比more 指令更加强大，支持各种显示终端。less 指令在显示文件内容时，并不是一次将整个文件加载之后才显示，而是根据显示需要加载内容，对于显示大型文件具有较高的效率。</p>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">less <span class="c1"># 功能描述：分屏查看文件内容</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>操作说明</p>
+<p><img src="image-20230430211539665.png" alt="image-20230430211539665"></p>
+</li>
+</ul>
+<h1 id="head显示文件头部内容">head：显示文件头部内容</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head 文件  <span class="c1"># 功能描述：查看文件头10行内容</span>
+</span></span><span class="line"><span class="cl">head -n 数字 文件  <span class="c1"># 功能描述：查看文件指定数字行内容</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430221306465.png" alt="image-20230430221306465"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430221429064.png" alt="image-20230430221429064"></p>
+</li>
+</ul>
+<h1 id="tail输出文件尾部内容">tail：输出文件尾部内容</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail 文件  <span class="c1"># 查看文件尾部10行内容</span>
+</span></span><span class="line"><span class="cl">tail -n 数字 文件  <span class="c1"># 查看文件尾部指定数字行内容</span>
+</span></span><span class="line"><span class="cl">tail -f 文件  <span class="c1"># 实时追踪文档的所有更新</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430221910048.png" alt="image-20230430221910048"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430222122865.png" alt="image-20230430222122865"></p>
+</li>
+</ul>
+<h1 id="echo输出内容到控制台">echo：输出内容到控制台</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="o">[</span>参数<span class="o">]</span> 输出内容  <span class="c1"># 输出指定内容到控制台</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430224523341.png" alt="image-20230430224523341"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430224855336.png" alt="image-20230430224855336"></p>
+</li>
+</ul>
+<h1 id="-输出重定向内容--追加内容">&gt; 输出重定向内容 &raquo; 追加内容</h1>
+<p><code>&gt;</code>与 <code>&gt;&gt;</code>常搭配<code>ls</code>，<code>cat</code>，<code>echo</code>使用</p>
+<ul>
+<li>
+<p>常用搭配</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l &gt; 文件  <span class="c1"># 功能描述：列表的内容覆盖到文件中</span>
+</span></span><span class="line"><span class="cl">ls -al &gt;&gt; 文件  <span class="c1"># 功能描述：列表的内容追加到文件末尾</span>
+</span></span><span class="line"><span class="cl">cat 文件1 &gt; 文件2  <span class="c1"># 功能描述：将文件呢1得内容覆盖到文件2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;内容&#34;</span> &gt;&gt; 文件  <span class="c1"># 功能描述：将输出内容追加到文件中</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Pure3417</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-04-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/linux/10/">
+            <span class="next-text nav-default">Linux实操-常用命令-文件目录操作</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:18365612600@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/pure3417" class="iconfont icon-github" title="github"></a>
+  <a href="https://pure3417.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Pure3417</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
