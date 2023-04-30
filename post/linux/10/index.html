@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux实操-常用命令-文件目录操作 - Pure3417</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pure3417" /><meta name="description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的" /><meta name="keywords" content="Linux, CentOS 7 常用命令" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="https://pure3417.top/post/linux/10/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux实操-常用命令-文件目录操作" />
+<meta property="og:description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pure3417.top/post/linux/10/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-04-28T20:31:55+08:00" />
+<meta property="article:modified_time" content="2023-04-28T20:31:55+08:00" />
+<meta itemprop="name" content="Linux实操-常用命令-文件目录操作">
+<meta itemprop="description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的"><meta itemprop="datePublished" content="2023-04-28T20:31:55+08:00" />
+<meta itemprop="dateModified" content="2023-04-28T20:31:55+08:00" />
+<meta itemprop="wordCount" content="798">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux实操-常用命令-文件目录操作"/>
+<meta name="twitter:description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pure3417</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pure3417</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux实操-常用命令-文件目录操作</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-04-28 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 798 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pwd显示工作路径">pwd：显示工作路径</a></li>
+    <li><a href="#ls列出目录内容">ls：列出目录内容</a></li>
+    <li><a href="#cd切换工作路径">cd：切换工作路径</a></li>
+    <li><a href="#mkdir创建目录">mkdir：创建目录</a></li>
+    <li><a href="#rmdir移除目录">rmdir：移除目录</a></li>
+    <li><a href="#touch创建文件">touch：创建文件</a></li>
+    <li><a href="#cp复制文件或目录">cp：复制文件或目录</a></li>
+    <li><a href="#rm删除文件或文件夹">rm：删除文件或文件夹</a></li>
+    <li><a href="#mv移动或重命名文件或目录">mv：移动或重命名文件或目录</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。</p>
+<p>相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &ldquo;D:\weblimg\logo.gif&rdquo; 或完整的网络地址&quot;https://images.cnblogs.com/cnblogs_com/blogs/677374/galleries/1959357/o_21041003493106.jpg&quot;</p>
+<h1 id="pwd显示工作路径">pwd：显示工作路径</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">pwd</span>  <span class="c1"># print working directory的缩写，功能描述：显示当前工作目录的绝对路径</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>实操案例</p>
+<p>显示当前工作目录的绝对路径</p>
+<p><img src="image-20230429183141931.png" alt="image-20230429183141931"></p>
+</li>
+</ul>
+<h1 id="ls列出目录内容">ls：列出目录内容</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls <span class="o">[</span>参数<span class="o">]</span> <span class="o">[</span>目录或文件<span class="o">]</span>  <span class="c1"># list的缩写，功能描述：列出目录内容</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>选项说明</p>
+<p><img src="image-20230429185649653.png" alt="image-20230429185649653"></p>
+</li>
+<li>
+<p>显示说明</p>
+<p>每行列出的信息依次是：<font color="red">文件的类型与权限 链接数 文件属主 文件属组 文件大小(用byte来表示) 建立或最近修改的时间 名字</font></p>
+</li>
+<li>
+<p>实操案例</p>
+<p>查看当前目录的所有内容信息</p>
+<p><img src="image-20230429185151354.png" alt="image-20230429185151354"></p>
+</li>
+</ul>
+<h1 id="cd切换工作路径">cd：切换工作路径</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="o">[</span>参数<span class="o">]</span>  <span class="c1"># change director的缩写，功能描述：切换工作路径</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230429190322556.png" alt="image-20230429190322556"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230429194733218.png" alt="image-20230429194733218"></p>
+</li>
+</ul>
+<h1 id="mkdir创建目录">mkdir：创建目录</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="o">[</span>选项<span class="o">]</span> 目录  <span class="c1"># make directory的缩写，功能描述：创建目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230429195443435.png" alt="image-20230429195443435"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230429200049995.png" alt="image-20230429200049995"></p>
+</li>
+</ul>
+<h1 id="rmdir移除目录">rmdir：移除目录</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rmdir <span class="o">[</span>参数<span class="o">]</span> 目录  <span class="c1"># remove directory的缩写，功能描述：移除目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430191237333.png" alt="image-20230430191237333"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430191534687.png" alt="image-20230430191534687"></p>
+</li>
+</ul>
+<h1 id="touch创建文件">touch：创建文件</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch 文件名 <span class="c1"># 功能描述：创建文件</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430195109958.png" alt="image-20230430195109958"></p>
+</li>
+</ul>
+<h1 id="cp复制文件或目录">cp：复制文件或目录</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp <span class="o">[</span>参数<span class="o">]</span> 源文件 目标文件  <span class="c1"># copy的缩写，功能描述：复制文件或目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430195438975.png" alt="image-20230430195438975"></p>
+</li>
+<li>
+<p>经验技巧</p>
+<p>强制覆盖文件不提醒用：<code>\cp</code></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430200556445.png" alt="image-20230430200556445"></p>
+</li>
+</ul>
+<h1 id="rm删除文件或文件夹">rm：删除文件或文件夹</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm <span class="o">[</span>参数<span class="o">]</span> 文件或文件夹  <span class="c1">#remove的缩写，功能描述：删除文件或文件夹</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430200930934.png" alt="image-20230430200930934"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430201315020.png" alt="image-20230430201315020"></p>
+</li>
+<li>
+<p>不要做的事情</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -rf /*  <span class="c1"># 当然实际工作中你不会有权限这么干</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h1 id="mv移动或重命名文件或目录">mv：移动或重命名文件或目录</h1>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv <span class="o">[</span>参数<span class="o">]</span> 源文件 目标文件  <span class="c1"># move的缩写，功能描述：移动或重命名文件或目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>参数说明</p>
+<p><img src="image-20230430201815123.png" alt="image-20230430201815123"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230430203009785.png" alt="image-20230430203009785"></p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Pure3417</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-04-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/linux/09/">
+            <span class="next-text nav-default">Linux实操-帮助命令及常用快捷键</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:18365612600@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/pure3417" class="iconfont icon-github" title="github"></a>
+  <a href="https://pure3417.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Pure3417</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
