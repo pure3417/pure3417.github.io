@@ -6,7 +6,16 @@
     <description>Recent content in Linux on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 30 Apr 2023 21:25:10 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 23:12:15 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-常用命令-软连接级查看历史命令</title>
+      <link>https://pure3417.top/post/linux/12/</link>
+      <pubDate>Sun, 30 Apr 2023 23:12:15 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/12/</guid>
+      <description>&lt;p&gt;软链接也称为符号链接，类似于windows 里的快捷方式，有自己的数据块，主要存放了链接其他文件的路径。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-文件的查看及追加内容</title>
       <link>https://pure3417.top/post/linux/11/</link>
@@ -38,12 +47,13 @@
     </item>
     
     <item>
-      <title>Linux实操-常用命令-文件目录操作</title>
+      <title>Linux实操-常用命令-文件目录类</title>
       <link>https://pure3417.top/post/linux/10/</link>
       <pubDate>Fri, 28 Apr 2023 20:31:55 +0800</pubDate>
       
       <guid>https://pure3417.top/post/linux/10/</guid>
-      <description>绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的</description>
+      <description>&lt;p&gt;绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。&lt;/p&gt;
+&lt;p&gt;相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &amp;ldquo;D:\weblimg\logo.gif&amp;rdquo; 或完整的网络地址。&lt;/p&gt;</description>
     </item>
     
     <item>

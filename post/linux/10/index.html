@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Linux实操-常用命令-文件目录操作 - Pure3417</title>
+  <title>Linux实操-常用命令-文件目录类 - Pure3417</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Pure3417" /><meta name="description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的" /><meta name="keywords" content="Linux, CentOS 7 常用命令" />
+<meta name="author" content="Pure3417" /><meta name="description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。
+相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &amp;ldquo;D:\weblimg\logo.gif&amp;rdquo; 或完整的网络地址。
+" /><meta name="keywords" content="Linux, CentOS 7 常用命令" />
 
 
 
@@ -39,19 +41,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Linux实操-常用命令-文件目录操作" />
-<meta property="og:description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的" />
+<meta property="og:title" content="Linux实操-常用命令-文件目录类" />
+<meta property="og:description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。
+相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &ldquo;D:\weblimg\logo.gif&rdquo; 或完整的网络地址。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pure3417.top/post/linux/10/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-04-28T20:31:55+08:00" />
 <meta property="article:modified_time" content="2023-04-28T20:31:55+08:00" />
-<meta itemprop="name" content="Linux实操-常用命令-文件目录操作">
-<meta itemprop="description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的"><meta itemprop="datePublished" content="2023-04-28T20:31:55+08:00" />
+<meta itemprop="name" content="Linux实操-常用命令-文件目录类">
+<meta itemprop="description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。
+相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &ldquo;D:\weblimg\logo.gif&rdquo; 或完整的网络地址。"><meta itemprop="datePublished" content="2023-04-28T20:31:55+08:00" />
 <meta itemprop="dateModified" content="2023-04-28T20:31:55+08:00" />
-<meta itemprop="wordCount" content="798">
+<meta itemprop="wordCount" content="697">
 <meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux实操-常用命令-文件目录操作"/>
-<meta name="twitter:description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。 相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的"/>
+<meta name="twitter:title" content="Linux实操-常用命令-文件目录类"/>
+<meta name="twitter:description" content="绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。
+相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &ldquo;D:\weblimg\logo.gif&rdquo; 或完整的网络地址。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,14 +129,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Linux实操-常用命令-文件目录操作</h1>
+      <h1 class="post-title">Linux实操-常用命令-文件目录类</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2023-04-28 </span>
         <div class="post-category">
             <a href="/categories/linux/"> Linux </a>
             </div>
-          <span class="more-meta"> 约 798 字 </span>
+          <span class="more-meta"> 约 697 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -157,7 +162,7 @@
 </div>
     <div class="post-content">
       <p>绝对路径：指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。</p>
-<p>相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &ldquo;D:\weblimg\logo.gif&rdquo; 或完整的网络地址&quot;https://images.cnblogs.com/cnblogs_com/blogs/677374/galleries/1959357/o_21041003493106.jpg&quot;</p>
+<p>相对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如， &ldquo;D:\weblimg\logo.gif&rdquo; 或完整的网络地址。</p>
 <h1 id="pwd显示工作路径">pwd：显示工作路径</h1>
 <ul>
 <li>
@@ -369,7 +374,6 @@
 <p><img src="image-20230430203009785.png" alt="image-20230430203009785"></p>
 </li>
 </ul>
-
     </div>
 
     <div class="post-copyright">
