@@ -6,7 +6,26 @@
     <description>Recent content in Posts on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 May 2023 18:58:38 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 May 2023 21:13:05 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-常用命令-用户权限类</title>
+      <link>https://pure3417.top/post/linux/14/</link>
+      <pubDate>Mon, 01 May 2023 21:13:05 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/14/</guid>
+      <description>&lt;p&gt;Linux下的用户可以分为三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;超级用户&lt;/li&gt;
+&lt;li&gt;系统用户（伪用户）&lt;/li&gt;
+&lt;li&gt;普通用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Linux下的组可以分为两类;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本组（私有组）&lt;/li&gt;
+&lt;li&gt;附加组（共有组）&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-时间日期类</title>
       <link>https://pure3417.top/post/linux/13/</link>
