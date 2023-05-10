@@ -13,7 +13,12 @@
       <pubDate>Thu, 26 Jan 2023 15:45:41 +0800</pubDate>
       
       <guid>https://pure3417.top/post/git/05/</guid>
-      <description>补充：Git的文件状态 Git的文件有两种状态：未跟踪和已跟踪。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三</description>
+      <description>&lt;p&gt;&lt;strong&gt;补充：Git的文件状态：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Git的文件有两种状态：&lt;strong&gt;未跟踪&lt;/strong&gt;和&lt;strong&gt;已跟踪&lt;/strong&gt;。未跟踪指文件没有被git所管理，已跟踪指文件已被git管理。已跟踪的文件又有三种状态：&lt;strong&gt;未修改&lt;/strong&gt;，&lt;strong&gt;已修改&lt;/strong&gt;和&lt;strong&gt;暂存&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;未修改：&lt;/strong&gt; 表示磁盘中的文件和Git仓库中文件相同，没有修改。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;已修改：&lt;/strong&gt; 表示磁盘中的文件已被修改，和Git仓库中文件不同。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;暂存：&lt;/strong&gt; 表示文件修改已被保存，但尚未提交到Git仓库。&lt;/p&gt;
+&lt;p&gt;可以通过&lt;code&gt;git status&lt;/code&gt;来查看文件状态&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +27,7 @@
       <pubDate>Thu, 26 Jan 2023 15:31:40 +0800</pubDate>
       
       <guid>https://pure3417.top/post/git/04/</guid>
-      <description>工作区域 git本地有三个工作区域 工作目录(working Directory)、暂存区(Stage/Index)、资源库(Repository</description>
+      <description>&lt;p&gt;Git是一个分布式的版本控制系统，与集中式的版本控制系统不同的是，每个人都工作在通过克隆建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、提交、创建里程碑和分支、合并分支、回退等所有操作都直接在本地完成而不需要网络连接。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +45,7 @@
       <pubDate>Wed, 25 Jan 2023 19:19:23 +0800</pubDate>
       
       <guid>https://pure3417.top/post/git/02/</guid>
-      <description>卸载 win 清理环境变量 右键我的电脑&amp;mdash;&amp;gt;属性&amp;mdash;&amp;gt;高级系统设置&amp;mdash;&amp;gt;环境变量&amp;mdash;&amp;gt</description>
+      <description>&lt;p&gt;环境变量（environment variables）一般是指在操作系统中用来指定操作系统运行环境的一些参数，如：临时文件夹位置和系统文件夹位置等。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +54,7 @@
       <pubDate>Wed, 25 Jan 2023 18:43:47 +0800</pubDate>
       
       <guid>https://pure3417.top/post/git/01/</guid>
-      <description>SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi</description>
+      <description>&lt;p&gt;SVN和Git都是比较常用和熟悉的版本控制器，各自有着自己的优势和实用场景。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,7 +63,8 @@
       <pubDate>Wed, 25 Jan 2023 03:12:22 +0800</pubDate>
       
       <guid>https://pure3417.top/post/git/00/</guid>
-      <description>Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。 Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方</description>
+      <description>&lt;p&gt;Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。&lt;/p&gt;
+&lt;p&gt;Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。&lt;/p&gt;</description>
     </item>
     
   </channel>

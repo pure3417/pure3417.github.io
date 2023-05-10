@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Pure3417" /><meta name="description" content="SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Pure3417" /><meta name="description" content="SVN和Git都是比较常用和熟悉的版本控制器，各自有着自己的优势和实用场景。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -40,18 +41,18 @@
 
 
 <meta property="og:title" content="Git与SVN的差异比较" />
-<meta property="og:description" content="SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi" />
+<meta property="og:description" content="SVN和Git都是比较常用和熟悉的版本控制器，各自有着自己的优势和实用场景。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pure3417.top/post/git/01/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-01-25T18:43:47+08:00" />
 <meta property="article:modified_time" content="2023-01-25T18:43:47+08:00" />
 <meta itemprop="name" content="Git与SVN的差异比较">
-<meta itemprop="description" content="SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi"><meta itemprop="datePublished" content="2023-01-25T18:43:47+08:00" />
+<meta itemprop="description" content="SVN和Git都是比较常用和熟悉的版本控制器，各自有着自己的优势和实用场景。"><meta itemprop="datePublished" content="2023-01-25T18:43:47+08:00" />
 <meta itemprop="dateModified" content="2023-01-25T18:43:47+08:00" />
-<meta itemprop="wordCount" content="3767">
+<meta itemprop="wordCount" content="3805">
 <meta itemprop="keywords" content="Git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git与SVN的差异比较"/>
-<meta name="twitter:description" content="SVN SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。 作为一个开源的版本控制系统，Subversi"/>
+<meta name="twitter:description" content="SVN和Git都是比较常用和熟悉的版本控制器，各自有着自己的优势和实用场景。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -131,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/git/"> Git </a>
             </div>
-          <span class="more-meta"> 约 3767 字 </span>
+          <span class="more-meta"> 约 3805 字 </span>
           <span class="more-meta"> 预计阅读 8 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -142,26 +143,40 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#svn">SVN</a></li>
-    <li><a href="#git">Git</a></li>
+    <li><a href="#svn">SVN</a>
+      <ul>
+        <li><a href="#集中式管理的工作流程如下图">集中式管理的工作流程如下图：</a></li>
+        <li><a href="#svn-的优缺点">SVN 的优缺点：</a></li>
+        <li><a href="#svn的特点概括起来主要由以下几条">SVN的特点概括起来主要由以下几条：</a></li>
+      </ul>
+    </li>
+    <li><a href="#git">Git</a>
+      <ul>
+        <li><a href="#经典的git开发过程">经典的git开发过程:</a></li>
+        <li><a href="#git的功能特性">Git的功能特性：</a></li>
+        <li><a href="#git的优缺点">Git的优缺点：</a></li>
+        <li><a href="#git特性">Git特性：</a></li>
+      </ul>
+    </li>
     <li><a href="#svn和git的区别">SVN和Git的区别：</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h1 id="svn">SVN</h1>
+      <p>SVN和Git都是比较常用和熟悉的版本控制器，各自有着自己的优势和实用场景。</p>
+<h1 id="svn">SVN</h1>
 <p>SVN是Subversion的简称，是一个开放源代码的版本控制系统，支持大多数常见的操作系统。</p>
 <p>作为一个开源的版本控制系统，Subversion管理着随时间改变的数据。</p>
 <p>这些数据放置在一个中央资料档案库(repository)中。这个档案库很像一个普通的文件服务器，不过它会记住每一次文件的变动。</p>
 <p>这样你就可以把档案恢复到旧的版本，或是浏览文件的变动历史。</p>
 <p>Subversion是一个通用的系统，可用来管理任何类型的文件，其中包括了程序源码。</p>
-<p><strong>集中式管理的工作流程如下图：</strong></p>
+<h2 id="集中式管理的工作流程如下图">集中式管理的工作流程如下图：</h2>
 <p><img src="svn.png" alt="svn"></p>
 <p>集中式代码管理的核心是服务器，所有开发者在开始新一天的工作之前必须从服务器获取代码，然后开发，最后解决冲突，提交。所有的版本信息都放在服务器上。如果脱离了服务器，开发者基本上可以说是无法工作的。</p>
-<p><strong>SVN 的优缺点：</strong></p>
+<h2 id="svn-的优缺点">SVN 的优缺点：</h2>
 <p>SVN对中文支持好，操作简单，使用没有难度，美工人员，产品人员，测试人员，实施人员都可轻松上手。使用界面统一，功能完善，操作方便。</p>
-<p><strong>SVN的特点概括起来主要由以下几条：</strong></p>
+<h2 id="svn的特点概括起来主要由以下几条">SVN的特点概括起来主要由以下几条：</h2>
 <p>1.每个版本库有唯一的URL（官方地址），每个用户都从这个地址获取代码和数据；</p>
 <p>2.获取代码的更新，也只能连接到这个唯一的版本库，同步以取得最新数据；</p>
 <p>3.提交必须有网络连接（非本地版本库）；</p>
@@ -172,9 +187,9 @@
 <p>Git是一款免费.开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目</p>
 <p>Git是一个开源的分布式版本控制系统，用以有效.高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
 <p>分布式相比于集中式的最大区别在于开发者可以提交到本地，每个开发者通过克隆（git clone），在本地机器上拷贝一个完整的Git仓库.</p>
-<p><strong>经典的git开发过程:</strong></p>
+<h2 id="经典的git开发过程">经典的git开发过程:</h2>
 <p><img src="git.png" alt="git"></p>
-<p><strong>Git的功能特性：</strong></p>
+<h2 id="git的功能特性">Git的功能特性：</h2>
 <p>从一般开发者的角度来看，git有以下功能：</p>
 <p>1.从服务器上克隆完整的Git仓库（包括代码和版本信息）到单机上。</p>
 <p>2.在自己的机器上根据不同的开发目的，创建分支，修改代码。</p>
@@ -188,9 +203,9 @@
 <p>1.查看邮件或者通过其它方式查看一般开发者的提交状态。</p>
 <p>2.打上补丁，解决冲突（可以自己解决，也可以要求开发者之间解决以后再重新提交，如果是开源项目，还要决定哪些补丁有用，哪些不用）。</p>
 <p>3.向公共服务器提交结果，然后通知所有开发人员。</p>
-<p><strong>Git的优缺点：</strong></p>
+<h2 id="git的优缺点">Git的优缺点：</h2>
 <p>对程序源代码进行差异化的版本管理，代码库占极少的空间。易于代码的分支化管理。不支持中文，图形界面支持差，使用难度大。不易推广。</p>
-<p><strong>Git特性：</strong></p>
+<h2 id="git特性">Git特性：</h2>
 <p>1.Git中每个克隆(clone)的版本库都是平等的。你可以从任何一个版本库的克隆来创建属于你自己的版本库，同时你的版本库也可以作为源提供给他人，只要你愿意。</p>
 <p>2.Git的每一次提取操作，实际上都是一次对代码仓库的完整备份。提交完全在本地完成，无须别人给你授权，你的版本库你作主，并且提交总是会成功。</p>
 <p>3.甚至基于旧版本的改动也可以成功提交，提交会基于旧的版本创建一个新的分支。</p>
@@ -219,7 +234,6 @@
 <p>6.Git使用128位ID作为版本号，而且checkout时要注明是哪个branch,而SVN使用一个递增的序列号作为全局唯一的版本号，更加简明易懂。虽然可以使用gittag来建立一些文字化的别名，但是毕竟那只是针对特殊版本。</p>
 <p>7.可跟踪性，git的典型开发过程为：建立分支，进行开发，提交到本地master，删除分支。这样做的后果是以前的修改细节会丢失。而在SVN下做同样的事情，不会丢失任何细节。这里是一个有趣的链接，表明了git下典型的工作方式：（以master为核心，不断创建新branch,删除旧branch):</p>
 <p>8.局部更新，局部还原。SVN由于是在每个文件夹建立一个.svn文件夹来实现管理，所以可以很简单实现局部更新或者还原。假如你只希望更新某些部分，则svn可以很好实现。同时代码写错了，同时可以很好实现局部还原，当然git也可以通过历史版本还原，但是无法简单地实现局部还原。</p>
-
     </div>
 
     <div class="post-copyright">

@@ -6,7 +6,16 @@
     <description>Recent content in Linux on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 03 May 2023 11:34:18 +0800</lastBuildDate><atom:link href="https://pure3417.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 May 2023 23:20:19 +0800</lastBuildDate><atom:link href="https://pure3417.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-常用命令-搜索查找类</title>
+      <link>https://pure3417.top/post/linux/16/</link>
+      <pubDate>Tue, 09 May 2023 23:20:19 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/16/</guid>
+      <description>&lt;p&gt;当服务器使用时间长且跑的业务相对比较多时，就会导致有时候对于某个文件具体的位置不是很清楚，一个一个目录找的话很浪费时间，而且最终还不一定可以找出来，这时候就需要用到搜索查找命令。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-文件权限类</title>
       <link>https://pure3417.top/post/linux/15/</link>
@@ -188,7 +197,7 @@
       <pubDate>Fri, 17 Feb 2023 22:21:16 +0800</pubDate>
       
       <guid>https://pure3417.top/post/linux/01/</guid>
-      <description>前言：Linux坏境，如果没有条件购买云服务器，电脑性能足够的话，可以在自己的电脑上安装一个虚拟机，然后在虚拟机里面安装一个linux系统。</description>
+      <description>&lt;p&gt;前言：Linux坏境，如果没有条件购买云服务器，电脑性能足够的话，可以在自己的电脑上安装一个虚拟机，然后在虚拟机里面安装一个linux系统。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -197,7 +206,10 @@
       <pubDate>Fri, 17 Feb 2023 22:20:58 +0800</pubDate>
       
       <guid>https://pure3417.top/post/linux/00/</guid>
-      <description>Linux概述 Linux内核最初是由芬兰的林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。 Linux是</description>
+      <description>&lt;h1 id=&#34;linux概述&#34;&gt;Linux概述&lt;/h1&gt;
+&lt;p&gt;Linux内核最初是由芬兰的&lt;font color=&#39;red&#39;&gt;林纳斯·托瓦兹&lt;/font&gt;（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。&lt;/p&gt;
+&lt;p&gt;Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。&lt;/p&gt;
+&lt;p&gt;Linux能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想,是一个性能稳定的多用户网络操作系统。&lt;/p&gt;</description>
     </item>
     
   </channel>

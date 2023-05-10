@@ -164,10 +164,13 @@ VMware Network Adapter VMnet8：宿主机与 NAT 虚拟网络进行通信的虚�
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#vmware的三种网络连接方式">VMware的三种网络连接方式</a></li>
-    <li><a href="#bridged桥接模式">bridged（桥接模式）</a></li>
-    <li><a href="#nat地址转换模式">NAT（地址转换模式）</a></li>
-    <li><a href="#host-only仅主机模式">Host-Only（仅主机模式）</a></li>
+    <li><a href="#vmware的三种网络连接方式">VMware的三种网络连接方式</a>
+      <ul>
+        <li><a href="#bridged桥接模式">bridged（桥接模式）</a></li>
+        <li><a href="#nat地址转换模式">NAT（地址转换模式）</a></li>
+        <li><a href="#host-only仅主机模式">Host-Only（仅主机模式）</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -190,7 +193,7 @@ VMware Network Adapter VMnet8：宿主机与 NAT 虚拟网络进行通信的虚�
 <p><img src="image-20230227142937308.png" alt="image-20230227142937308"></p>
 <p>从上面可以看出，主机是没有桥接模式对应的VMnet0虚拟网卡的。</p>
 <p>下面介绍三种方式的区别</p>
-<h1 id="bridged桥接模式">bridged（桥接模式）</h1>
+<h2 id="bridged桥接模式">bridged（桥接模式）</h2>
 <p>在桥接模式下，使用 VMware 创建的虚拟机就像是你买了一台新主机接到了局域网的交换机或者路由器上。它可以配置IP地址、子网掩码和其它的 TCP/IP 信息，同时它也可以<strong>访问局域网内任何一台机器</strong>。</p>
 <p>结构图如下：</p>
 <p><img src="Bridged.png" alt="Bridged"></p>
@@ -200,7 +203,7 @@ VMware Network Adapter VMnet8：宿主机与 NAT 虚拟网络进行通信的虚�
 <ul>
 <li>局域网中的 IP 地址足够，并且局域网内的其他设备需要访问虚拟机。</li>
 </ul>
-<h1 id="nat地址转换模式">NAT（地址转换模式）</h1>
+<h2 id="nat地址转换模式">NAT（地址转换模式）</h2>
 <p>NAT 模式就是让虚拟机借助 NAT （网络地址转换）功能，<strong>通过宿主机来访问外部网络</strong>。</p>
 <p>在 NAT 模式下，虚拟机与宿主机的关系就像是孩子与监管很严格的父亲之间的关系。孩子想要和外面的人交流，需要先告诉父亲，然后由父亲转达。外面的人想和孩子交流，也需要先告诉父亲，然后由父亲转达给孩子。虚拟机想要访问网络，需要经过宿主机代劳。在外部设备看来，是宿主机提出了网络请求，所以将网络数据返回给了宿主机。宿主机收到数据之后，转发给虚拟机。</p>
 <p>结构图如下：</p>
@@ -212,7 +215,7 @@ VMware Network Adapter VMnet8：宿主机与 NAT 虚拟网络进行通信的虚�
 <li>场景1：局域网中的 IP 地址紧张，不能给虚拟机分配单独的 IP 地址。</li>
 <li>场景2：只需要虚拟机访问外部网络，不需要外部设备访问虚拟机。</li>
 </ul>
-<h1 id="host-only仅主机模式">Host-Only（仅主机模式）</h1>
+<h2 id="host-only仅主机模式">Host-Only（仅主机模式）</h2>
 <p>在有些情况下，我们需要<strong>将虚拟机所在的网络环境与宿主机所在的网络环境进行隔离</strong>，这个时候就可以采用 Host-only 模式。</p>
 <p>在 Host-only 模式下：</p>
 <ul>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Git简介 - Pure3417</title>
+  <title>Linux实操-常用命令-搜索查找类 - Pure3417</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,9 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Pure3417" /><meta name="description" content="Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。
-Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。
-" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Pure3417" /><meta name="description" content="当服务器使用时间长且跑的业务相对比较多时，就会导致有时候对于某个文件具体的位置不是很清楚，一个一个目录找的话很浪费时间，而且最终还不一定可以找出来，这时候就需要用到搜索查找命令。
+" /><meta name="keywords" content="Linux, CentOS 7 常用命令, Linux 常用命令, Linux 搜索查找命令" />
 
 
 
@@ -28,7 +27,7 @@ Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库
 <meta name="generator" content="Hugo 0.110.0 with theme even" />
 
 
-<link rel="canonical" href="https://pure3417.top/post/git/00/" />
+<link rel="canonical" href="https://pure3417.top/post/linux/16/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,22 +40,19 @@ Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Git简介" />
-<meta property="og:description" content="Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。
-Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。" />
+<meta property="og:title" content="Linux实操-常用命令-搜索查找类" />
+<meta property="og:description" content="当服务器使用时间长且跑的业务相对比较多时，就会导致有时候对于某个文件具体的位置不是很清楚，一个一个目录找的话很浪费时间，而且最终还不一定可以找出来，这时候就需要用到搜索查找命令。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pure3417.top/post/git/00/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-01-25T03:12:22+08:00" />
-<meta property="article:modified_time" content="2023-01-25T03:12:22+08:00" />
-<meta itemprop="name" content="Git简介">
-<meta itemprop="description" content="Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。
-Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。"><meta itemprop="datePublished" content="2023-01-25T03:12:22+08:00" />
-<meta itemprop="dateModified" content="2023-01-25T03:12:22+08:00" />
-<meta itemprop="wordCount" content="750">
-<meta itemprop="keywords" content="Git," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git简介"/>
-<meta name="twitter:description" content="Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。
-Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。"/>
+<meta property="og:url" content="https://pure3417.top/post/linux/16/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-09T23:20:19+08:00" />
+<meta property="article:modified_time" content="2023-05-09T23:20:19+08:00" />
+<meta itemprop="name" content="Linux实操-常用命令-搜索查找类">
+<meta itemprop="description" content="当服务器使用时间长且跑的业务相对比较多时，就会导致有时候对于某个文件具体的位置不是很清楚，一个一个目录找的话很浪费时间，而且最终还不一定可以找出来，这时候就需要用到搜索查找命令。"><meta itemprop="datePublished" content="2023-05-09T23:20:19+08:00" />
+<meta itemprop="dateModified" content="2023-05-09T23:20:19+08:00" />
+<meta itemprop="wordCount" content="425">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux实操-常用命令-搜索查找类"/>
+<meta name="twitter:description" content="当服务器使用时间长且跑的业务相对比较多时，就会导致有时候对于某个文件具体的位置不是很清楚，一个一个目录找的话很浪费时间，而且最终还不一定可以找出来，这时候就需要用到搜索查找命令。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,15 +125,15 @@ Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Git简介</h1>
+      <h1 class="post-title">Linux实操-常用命令-搜索查找类</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2023-01-25 </span>
+        <span class="post-time"> 2023-05-09 </span>
         <div class="post-category">
-            <a href="/categories/git/"> Git </a>
+            <a href="/categories/linux/"> Linux </a>
             </div>
-          <span class="more-meta"> 约 750 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 425 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -147,37 +143,84 @@ Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#何为版本控制">何为版本控制</a></li>
-    <li><a href="#版本控制分类">版本控制分类</a>
-      <ul>
-        <li><a href="#集中式版本控制工具">集中式版本控制工具</a></li>
-        <li><a href="#分布式版本控制工具">分布式版本控制工具</a></li>
-      </ul>
-    </li>
+    <li><a href="#find-查找文件或者目录">find 查找文件或者目录</a></li>
+    <li><a href="#locate-快速定位文件路径">locate 快速定位文件路径</a></li>
+    <li><a href="#grep-过滤查找及管道符">grep 过滤查找及“|”管道符</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。</p>
-<p>Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。</p>
-<h1 id="何为版本控制">何为版本控制</h1>
-<p>版本控制是一种记录文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
-<p>版本控制其实最重要的是可以记录文件修改历史记录，从而让用户能够查看历史版本， 方便版本切换。</p>
-<h1 id="版本控制分类">版本控制分类</h1>
-<h2 id="集中式版本控制工具">集中式版本控制工具</h2>
-<p>CVS、SVN(Subversion)、VSS……</p>
-<p>集中化的版本控制系统诸如 CVS、SVN 等，都有一个单一的集中管理的服务器，保存 所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或 者提交更新。多年以来，这已成为版本控制系统的标准做法。</p>
-<p>这种做法带来了许多好处，每个人都可以在一定程度上看到项目中的其他人正在做些什 么。而管理员也可以轻松掌控每个开发者的权限，并且管理一个集中化的版本控制系统，要 远比在各个客户端上维护本地数据库来得轻松容易。</p>
-<p>事分两面，有好有坏。这么做显而易见的缺点是中央服务器的单点故障。如果服务器宕 机一小时，那么在这一小时内，谁都无法提交更新，也就无法协同工作。</p>
-<h2 id="分布式版本控制工具">分布式版本控制工具</h2>
-<p>Git、Mercurial、Bazaar、Darcs……</p>
-<p>像 Git 这种分布式版本控制工具，客户端提取的不是最新版本的文件快照，而是把代码  仓库完整地镜像下来（本地库）。这样任何一处协同工作用的文件发生故障，事后都可以用  其他客户端的本地仓库进行恢复。因为每个客户端的每一次文件提取操作，实际上都是一次 对整个文件仓库的完整备份。</p>
-<p>分布式的版本控制系统出现之后,解决了集中式版本控制系统的缺陷:</p>
-<ol>
-<li>服务器断网的情况下也可以进行开发（因为版本控制是在本地进行的）</li>
-<li>每个客户端保存的也都是整个完整的项目（包含历史记录，更加安全）</li>
-</ol>
+      <p>当服务器使用时间长且跑的业务相对比较多时，就会导致有时候对于某个文件具体的位置不是很清楚，一个一个目录找的话很浪费时间，而且最终还不一定可以找出来，这时候就需要用到搜索查找命令。</p>
+<h1 id="find-查找文件或者目录">find 查找文件或者目录</h1>
+<p>find 指令将从指定目录向下递归地遍历其各个子目录，将满足条件的文件显示在终端。</p>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find <span class="o">[</span>搜索范围<span class="o">]</span> <span class="o">[</span>选项<span class="o">]</span>  <span class="c1"># 功能描述：查找文件或者目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>选项说明</p>
+<p><img src="image-20230510135900587.png" alt="image-20230510135900587"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230510135554194.png" alt="image-20230510135554194"></p>
+</li>
+</ul>
+<h1 id="locate-快速定位文件路径">locate 快速定位文件路径</h1>
+<p>locate 指令利用事先建立的系统中所有文件名称及路径的locate 数据库实现快速定位给定的文件。Locate 指令无需遍历整个文件系统，查询速度较快。为了保证查询结果的准确度，管理员必须定期更新locate 时刻。</p>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locate 搜索文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>经验技巧</p>
+<p>由于locate 指令基于数据库进行查询，所以第一次运行前，必须使<code>updatedb</code>指令创建locate 数据库。</p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230510140450328.png" alt="image-20230510140450328"></p>
+</li>
+</ul>
+<h1 id="grep-过滤查找及管道符">grep 过滤查找及“|”管道符</h1>
+<p>管道符，“|”，表示将前一个命令的处理结果输出传递给后面的命令处理</p>
+<ul>
+<li>
+<p>基本语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="o">[</span>选项<span class="o">]</span> 查找内容 源文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>选项说明</p>
+<p><img src="image-20230510140700413.png" alt="image-20230510140700413"></p>
+</li>
+<li>
+<p>实操案例</p>
+<p><img src="image-20230510140859200.png" alt="image-20230510140859200"></p>
+</li>
+</ul>
     </div>
 
     <div class="post-copyright">
@@ -188,7 +231,7 @@ Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2023-01-25
+        2023-05-09
         
     </span>
   </p>
@@ -197,16 +240,12 @@ Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/git/">Git</a>
+          <a href="/tags/linux/">Linux</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/git/01/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Git与SVN的差异比较</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/hugo/00/">
-            <span class="next-text nav-default">Hugo安装与部署</span>
+        
+        <a class="next" href="/post/linux/15/">
+            <span class="next-text nav-default">Linux实操-常用命令-文件权限类</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
