@@ -6,7 +6,16 @@
     <description>Recent content in Linux on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 May 2023 14:13:01 +0800</lastBuildDate><atom:link href="https://pure3417.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 15:37:47 +0800</lastBuildDate><atom:link href="https://pure3417.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-常用命令-磁盘管理类</title>
+      <link>https://pure3417.top/post/linux/18/</link>
+      <pubDate>Wed, 10 May 2023 15:37:47 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/18/</guid>
+      <description>&lt;p&gt;在Linux系统中，如何有效地对存储空间加以使用和管理，是一项非常重要的技术。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-压缩和解压类</title>
       <link>https://pure3417.top/post/linux/17/</link>
