@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 May 2023 15:10:23 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 16:41:28 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux扩展-软件包管理工具</title>
+      <link>https://pure3417.top/post/linux/21/</link>
+      <pubDate>Wed, 31 May 2023 16:41:28 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/21/</guid>
+      <description>&lt;p&gt;大多数现代类 Unix 操作系统都提供了一个集中的软件包管理机制，以帮助用户搜索、安装和管理软件。而软件通常以「包」的形式存储在仓库「repository」中，对软件包的使用和管理被称为包管理。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-crontab系统定时任务</title>
       <link>https://pure3417.top/post/linux/20/</link>
