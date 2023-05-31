@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 May 2023 15:37:47 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 May 2023 10:19:49 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-常用命令-进程管理类</title>
+      <link>https://pure3417.top/post/linux/19/</link>
+      <pubDate>Sat, 20 May 2023 10:19:49 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/19/</guid>
+      <description>&lt;p&gt;进程是正在执行的一个程序或命令，每一个进程都是一个运行的实体，都有自己的地址空间，并占用一定的系统资源。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-磁盘管理类</title>
       <link>https://pure3417.top/post/linux/18/</link>
