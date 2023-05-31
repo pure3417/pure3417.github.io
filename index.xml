@@ -6,7 +6,16 @@
     <description>Recent content on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 May 2023 10:19:49 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 15:10:23 +0800</lastBuildDate><atom:link href="https://pure3417.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux实操-crontab系统定时任务</title>
+      <link>https://pure3417.top/post/linux/20/</link>
+      <pubDate>Wed, 31 May 2023 15:10:23 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/20/</guid>
+      <description>&lt;p&gt;计划任务是需要在指定时间执行的任务或者是周期性执行的任务，比如凌晨3点重启设备，每周对日志文件备份等。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux实操-常用命令-进程管理类</title>
       <link>https://pure3417.top/post/linux/19/</link>
