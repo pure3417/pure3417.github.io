@@ -6,7 +6,16 @@
     <description>Recent content in Linux on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 May 2023 16:41:28 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 19:34:37 +0800</lastBuildDate><atom:link href="https://pure3417.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux扩展-克隆虚拟机</title>
+      <link>https://pure3417.top/post/linux/22/</link>
+      <pubDate>Wed, 31 May 2023 19:34:37 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/linux/22/</guid>
+      <description>&lt;p&gt;平时开发的时候需要做集群，比如 redis 集群、kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux扩展-软件包管理工具</title>
       <link>https://pure3417.top/post/linux/21/</link>

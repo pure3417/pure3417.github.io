@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux扩展-克隆虚拟机 - Pure3417</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pure3417" /><meta name="description" content="平时开发的时候需要做集群，比如 redis 集群、kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。
+" /><meta name="keywords" content="Linux, CentOS 7 常用命令, Linux 常用命令, Linux 克隆虚拟机" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="https://pure3417.top/post/linux/22/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux扩展-克隆虚拟机" />
+<meta property="og:description" content="平时开发的时候需要做集群，比如 redis 集群、kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pure3417.top/post/linux/22/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-31T19:34:37+08:00" />
+<meta property="article:modified_time" content="2023-05-31T19:34:37+08:00" />
+<meta itemprop="name" content="Linux扩展-克隆虚拟机">
+<meta itemprop="description" content="平时开发的时候需要做集群，比如 redis 集群、kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。"><meta itemprop="datePublished" content="2023-05-31T19:34:37+08:00" />
+<meta itemprop="dateModified" content="2023-05-31T19:34:37+08:00" />
+<meta itemprop="wordCount" content="496">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux扩展-克隆虚拟机"/>
+<meta name="twitter:description" content="平时开发的时候需要做集群，比如 redis 集群、kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pure3417</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pure3417</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux扩展-克隆虚拟机</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-05-31 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 496 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#克隆虚拟机">克隆虚拟机</a></li>
+    <li><a href="#开机修改系统相关配置">开机修改系统相关配置</a>
+      <ul>
+        <li><a href="#修改ip地址">修改ip地址</a></li>
+        <li><a href="#修改主机名">修改主机名</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>平时开发的时候需要做集群，比如 redis 集群、kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。</p>
+<h1 id="克隆虚拟机">克隆虚拟机</h1>
+<ol>
+<li>
+<p>从现有虚拟机(关机状态)克隆出新虚拟机，右键选择管理=&gt;克隆</p>
+<p><img src="image-20230531194212714.png" alt="image-20230531194212714"></p>
+</li>
+<li>
+<p>点击下一步</p>
+<p><img src="image-20230531194254585.png" alt="image-20230531194254585"></p>
+</li>
+<li>
+<p>选择虚拟机中的当前状态，下一步</p>
+<p><img src="image-20230531194358613.png" alt="image-20230531194358613"></p>
+</li>
+<li>
+<p>选择创建完整克，下一步</p>
+<p><img src="image-20230531194448088.png" alt="image-20230531194448088"></p>
+</li>
+<li>
+<p>设置虚拟机名称及存储位置，完成</p>
+<p><img src="image-20230531194558868.png" alt="image-20230531194558868"></p>
+</li>
+<li>
+<p>等待克隆完成，关闭</p>
+<p><img src="image-20230531194715941.png" alt="image-20230531194715941"></p>
+<p><img src="image-20230531194733546.png" alt="image-20230531194733546"></p>
+</li>
+</ol>
+<h1 id="开机修改系统相关配置">开机修改系统相关配置</h1>
+<h2 id="修改ip地址">修改ip地址</h2>
+<p>修改/etc/sysconfig/network-scripts/ifcfg-ens33，修改IP 地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/sysconfig/network-scripts/ifcfg-ens33
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改配置信息如下（主要修改IP地址与原虚拟机不同）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">ONBOOT</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">OXY_METHOD</span><span class="o">=</span><span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">BROWSER_ONLY</span><span class="o">=</span><span class="s2">&#34;no&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">BOOTPROTO</span><span class="o">=</span><span class="s2">&#34;static&#34;</span>  <span class="c1"># IP 的配置方法[none|static|bootp|dhcp]（引导时不使用协议|静态分配IP|BOOTP 协议|DHCP 协议）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEFROUTE</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPV4_FAILURE_FATAL</span><span class="o">=</span><span class="s2">&#34;no&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPV6INIT</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPV6_AUTOCONF</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPV6_DEFROUTE</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPV6_FAILURE_FATAL</span><span class="o">=</span><span class="s2">&#34;no&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPV6_ADDR_GEN_MODE</span><span class="o">=</span><span class="s2">&#34;stable-privacy&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NAME</span><span class="o">=</span><span class="s2">&#34;ens33&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">UUID</span><span class="o">=</span><span class="s2">&#34;60bdb997-ec15-437d-a995-fb97fb852e64&#34;</span> <span class="c1">#随机id</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEVICE</span><span class="o">=</span><span class="s2">&#34;ens33&#34;</span> <span class="c1"># 接口名（设备,网卡）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ONBOOT</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span> <span class="c1"># 系统启动的时候网络接口是否有效（yes/no）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># IP 地址</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IPADDR</span><span class="o">=</span>192.168.0.101
+</span></span><span class="line"><span class="cl"><span class="c1"># 网关</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GATEWAY</span><span class="o">=</span>192.168.0.2
+</span></span><span class="line"><span class="cl"><span class="c1"># 域名解析器</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DNS1</span><span class="o">=</span>8.8.8.8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="修改主机名">修改主机名</h2>
+<p>修改/etc/hostname，修改主机名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hostname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改信息如下（修改主机名与原虚拟机不同）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pure101
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Pure3417</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-05-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/linux/21/">
+            <span class="next-text nav-default">Linux扩展-软件包管理工具</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:18365612600@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/pure3417" class="iconfont icon-github" title="github"></a>
+  <a href="https://pure3417.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Pure3417</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
