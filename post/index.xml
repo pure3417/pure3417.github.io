@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Pure3417</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 May 2023 19:34:37 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jun 2023 20:12:42 +0800</lastBuildDate><atom:link href="https://pure3417.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell编程-Shell概述</title>
+      <link>https://pure3417.top/post/shell/00/</link>
+      <pubDate>Thu, 01 Jun 2023 20:12:42 +0800</pubDate>
+      
+      <guid>https://pure3417.top/post/shell/00/</guid>
+      <description>&lt;p&gt;shell 是操作系统的最外层。shell 合并编程语言以控制进程和文件，以及启动和控制其它程序。shell 通过提示您输入，向操作系统解释该输入，然后处理来自操作系统的任何结果输出来管理您与操作系统之间的交互。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux扩展-克隆虚拟机</title>
       <link>https://pure3417.top/post/linux/22/</link>
